@@ -1,0 +1,20 @@
+.cc-revoke,
+.cc-window{
+	font: $Copy;
+	
+	.cc-link{
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	&.cc-banner{
+		height: 50vh;
+		padding: 2% 33%;
+		flex-direction: column;
+	}
+
+
+}
+
+.cc-revoke {
+	display: none;
+}

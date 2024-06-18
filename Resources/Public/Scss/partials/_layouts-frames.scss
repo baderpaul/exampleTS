@@ -1,0 +1,944 @@
+/***********************************************************************************
+	             			        Eingene Layouts im CE
+************************************************************************************/
+#content, #slider{
+
+	/******** .block ********/
+	.block {
+		display: block;
+		overflow: hidden;
+	}
+
+/******** .width50 ********/
+	.frame-width50{
+		overflow: auto;
+		@include breakpoint(mopo,max){
+			width: 100%;
+			margin: 0 auto;
+		}
+			
+		@include breakpoint(tapo){
+			width: 100%;
+			margin: 0 auto;
+		}
+		
+		@include breakpoint(desksmall){
+			width: 50%;
+			max-width: 85.375rem;
+			margin: 0 auto 2rem;
+		}
+		
+			
+		& > header,
+		& > p,
+		.ce-bodytext {
+			@include breakpoint(mopo,max){
+				margin: 0 0.5rem;
+			}
+		}
+			
+		.twoCol,
+		.threeCol,
+		.fourCol {
+			width: 100%;
+		}
+	}
+
+	/******** .width70 ********/
+	.frame-width70{
+		overflow: auto;
+		@include breakpoint(mopo,max){
+			width: 100%;
+			margin: 0 auto;
+		}
+			
+		@include breakpoint(tapo){
+			width: 100%;
+			margin: 0 auto;
+		}
+		
+		@include breakpoint(desksmall){
+			width: 70%;
+			max-width: 85.375rem;
+			margin: 0 auto 2rem;
+		}
+		
+			
+		& > header,
+		& > p,
+		.ce-bodytext {
+			@include breakpoint(mopo,max){
+				margin: 0 0.5rem;
+			}
+		}
+			
+		.twoCol,
+		.threeCol,
+		.fourCol {
+			width: 100%;
+		}
+	}	
+
+/******** .signature ********/
+	
+	.frame-signature {
+		
+		& > * {
+			max-width: $maxWidth;
+		}
+		padding: 0 5% 1rem;
+		background-color: $colSignature;
+		margin-bottom: 1rem;
+	
+		
+		@include breakpoint(tala){
+			padding: 1rem;
+	
+		}
+		
+		div[id^="c"]{
+			margin: 0rem auto;
+			max-width: $maxWidth;
+	
+		}
+		
+		p,h2,h3,h4,li,a,strong {
+			color: $colBase;
+		}
+		
+		h2,h3,p {
+			padding-top: 1rem;
+		}
+		
+		h3 {
+			font-style: italic;
+		}
+		
+		
+		.ce-media{
+			margin-bottom: 0;
+		}
+		
+		.ce-bodytext {
+				padding: 0 1rem;
+		}
+	}
+
+
+	/******** .signature70 ********/
+
+	.frame-signature70 {
+		
+		& > * {
+			max-width: $maxWidth;
+		}
+		padding: 0 5% 1rem;
+		background-color: $colSignature;
+		margin-bottom: 1rem;
+
+		
+		@include breakpoint(tala){
+			padding: 0 15% 1rem;
+
+		}
+		
+		div[id^="c"]{
+			margin: 0rem auto;
+			max-width: $maxWidth;
+
+		}
+		
+		p,h2,h3,h4,li,a {
+			color: $colBase;
+		}
+		
+		h2,h3,p {
+			padding-top: 1rem;
+		}
+		
+		h3 {
+			font-style: italic;
+		}
+		
+		
+		.ce-media{
+			margin-bottom: 0;
+		}
+		
+		.ce-bodytext {
+				padding: 0 1rem;
+		}
+	}
+
+
+
+	/******** .claim ********/	
+	.frame-claim {
+		padding: 0rem;
+		max-width: $maxWidth;
+		margin: 2rem auto;
+		color: $colSignature;
+		
+		@include breakpoint(tapo) {
+			padding: 1rem;
+			margin: 0 auto;	
+			text-align: center;
+			width: 100%;
+		}
+		
+		@include breakpoint(desksmall){
+			padding: 5rem 0;
+			width: 70%;
+ 
+		}
+
+		p{
+			font: italic 300 2rem/3.5rem $copyfont; 
+			color: $colSignature;
+			margin: 0 auto;
+		    text-align: center;
+		    
+		    @include breakpoint(mopo,max){
+			    font-weight: 300;
+				font-size: 1.5rem;
+				line-height: 2rem;
+				width: 100%;
+		    }
+		}
+	}
+
+
+	/******** .signature ********/	
+	.signature, .signatureimage {
+		background-color: $colSignature;
+		padding: 1rem;
+		div[id^="c"]{
+			margin-bottom: 0;
+		}
+		
+		p,h2,h3,h4,li,a,b,strong {
+			color: $colBase;
+		}
+		
+		a{
+			text-decoration: underline;
+			
+			&:hover{
+				background-color: white;
+				color: $colSignature;
+				text-decoration: none;
+				padding: 0.1rem 0.25rem;
+			}
+		}
+		
+		p{
+			margin-bottom: 0;
+		}
+		
+		margin-bottom:1rem;
+	}
+
+
+	/******** .signatureimage ********/
+
+	.signatureimage{
+		padding: 0rem;
+		max-height: 70vh;
+
+		
+		.ce-bodytext{
+			padding-right: 2rem;
+			margin-top: 1rem;
+		}
+		
+		.ce-media{
+			height: 100vh;
+			overflow: hidden;
+			margin-top: -1rem;
+
+			
+			img{
+				width: auto;
+				height: 100%;
+			}
+		}
+		
+		@include breakpoint(portrait) {
+			.ce-media{
+				height: auto;
+				overflow: inherit;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}	
+	}
+
+	/******** .signaturetwo / .signaturetwoimage / .signaturetwo70 ********/
+	
+	.signaturetwo,
+	.signaturetwoimage,
+	.signaturetwo70 {
+		background-color: $colSignature2;
+		padding:  1rem;
+		margin-bottom: 1rem;
+		div[id^="c"]{
+			margin-bottom: 0;
+		}
+		p,h2,h3,li {
+			color: $colBase;
+		}
+		
+		div[id^="c"]{
+			margin-bottom: 0;
+			& > h2,
+			& > h3{ 
+				padding: 0 1rem;
+			}
+		}
+		
+		.ce-bodytext {
+			padding: 0 1rem;
+			margin-top: 1rem;
+		}
+	}
+	
+	.signaturetwoimage{
+		padding: 0;
+	}
+	
+	.signaturetwo70 {
+		margin-bottom: 0;
+		padding: 0 15%;
+	}
+
+
+	/******** .blueborder / .blueborder70 ********/
+	.frame-blueborder,
+	.frame-blueborder70{
+		border: 1px solid $colSignature;
+		padding: 1rem;
+		div[id^="c"]{
+			margin-bottom: 0;
+		}
+		
+		.ce-bodytext {
+			p{
+				margin-bottom: 0;
+			}
+		}
+		
+		margin-bottom: 2rem;
+	}
+
+	.frame-blueborder70{
+  	
+  	.twoCol {
+    	margin-bottom: 0;
+    	.ce-media{
+      	margin-bottom: 0;
+    	}
+  	}
+  	
+		@include breakpoint(mopo,max){
+			width: 100%;
+			margin: 0 auto;
+		}
+		width: auto;
+		margin: 0 5% 1rem;
+		@include breakpoint(tapo){
+			margin: 0 0 1rem;
+		}
+		
+		@include breakpoint(desksmall){
+			width: 70%;
+			max-width: 85.375rem;
+			margin: 0 auto 2rem;
+		}		
+	}
+
+	.blueborder {
+		.twoCol,
+		.threeCol,
+		.fourCol{
+			width: 100%;
+		}
+	}
+
+
+	/******** .frame-sale / Sold ********/	
+	.frame-sale{
+		border: none;
+		background: $colGreyBG;
+		padding: 0 0 0rem;
+		text-align: left;
+		position: relative;
+		height: 100%;
+		
+		@include breakpoint(mopo, max) {
+			width: 100%;
+		}
+		
+		
+		div[id^="c"]{
+			margin-bottom: 0;
+		}
+		.ce-gallery{
+			margin-bottom: 2rem;
+		}
+		.ce-bodytext{
+			h3{
+				text-align: center;
+				margin: 0.5rem 1rem;
+				text-transform: uppercase;
+			}
+		}
+		
+		p {
+			margin: 0 1rem 1rem;
+			
+			&.intro {
+				@include Intro;
+				margin-bottom: 1rem;
+				
+				@include breakpoint(desklarge){
+					font-size: 1.35rem;
+					line-height: 2rem;
+				}
+			}
+			
+			&.goTo{
+				@include Intro;
+				bottom: 1rem;
+				text-align: right;
+				padding-bottom: 3rem;
+				
+				a{
+					position: absolute;
+					bottom: 1rem;
+					right: 1rem;
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		&_sold {
+			@extend .frame-sale;
+			
+			.ce-bodytext,
+			.ce-gallery{
+				-webkit-filter: blur(2px);
+				filter: blur(2px);				
+			}
+			
+			&:after{
+				content: 'Alle Einheiten verkauft!';
+				background-color: $colSignature2;
+				padding: 0.5rem;
+				width: 80%;
+				top: 6rem;
+				left: 7%;
+				right: 7%;
+				margin: 0 auto;
+				position: absolute;
+				transform: rotate(-10deg);
+				color: white;
+				text-align: center;
+				box-shadow: 3px 3px 5px $colShadow;
+				font-size: 1rem;
+				text-transform: uppercase;
+			}
+		}
+	}
+	
+
+
+	.frame-soldBanner,
+	.frame-reservationBanner{
+		position: relative;
+		
+		h2,
+		.leftCol,
+		.rightCol{
+			 -webkit-filter: blur(2px);
+			 filter: blur(2px);
+		}
+		
+		&:after{
+			content: 'Verkauft!';
+			background-color: $colSignature2;
+			padding: 3rem;
+			width: 60%;
+			top: 6rem;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			position: absolute;
+			transform: rotate(-10deg);
+			color: white;
+			text-align: center;
+			box-shadow: 3px 3px 5px $colShadow;
+			font-size: 2rem;
+			text-transform: uppercase;
+		}
+
+		border: 10px double;
+		border-color: $colSignature;
+		padding: 1rem;
+		div[id^="c"]{
+			margin-bottom: 0;
+		}
+		
+		.ce-bodytext {
+			p{
+				margin-bottom: 0;
+			}
+		}
+		
+		margin-bottom: 2rem;
+		
+		.twoCol,
+		.threeCol,
+		.fourCol{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+	}
+	
+	.frame-reservationBanner{
+		
+		h2,
+		.leftCol,
+		.rightCol{
+			 -webkit-filter:inherit;
+			 filter: inherit;
+		}
+		
+		
+		&:after{
+			content: 'Dieses Objekt ist reserviert!';
+			background-color: $colSignature;
+
+		}
+	}
+	
+	.frame-soldBanner{
+		height: 20rem;
+		overflow: hidden;
+	}
+
+	.frame-reservationBanner{
+		overflow: hidden;
+	}	
+
+	.bluesale{
+		background-color: $colSignature;
+		padding: 1rem;
+		text-align: center;
+		div[id^="c"]{
+			margin-bottom: 0;
+		}
+		p,h2,h3,h4,li,a {
+			color: $colBase;
+		}
+		
+		.ce-gallery{
+			margin-bottom: 2rem;
+		}
+	}
+		
+	.factIcons,
+	.frame-factIcons,
+	.ansichten {
+		
+		div[data-ce-columns='4'],
+		div[data-ce-columns='5']{
+			
+			.ce-row {
+				float: none;
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: nowrap;
+				&:after{
+					content: none;
+				}
+				
+				.ce-column{
+					width: auto;
+					max-width: 25%;
+					
+					img{
+						width: 50%;
+						margin: 0 auto;
+					}
+					
+					
+					
+					figcaption{
+						text-align: center;
+						background: transparent;
+						font-size: 1rem;
+					}
+					
+					@include breakpoint(mopo,max){
+						max-width: 33%;
+						margin: 0 0.5rem;
+					}
+				}
+			}
+		}
+		div[data-ce-columns='5']{
+			.ce-row{
+				.ce-column{
+					max-width: 20%;
+				}
+			}
+			}
+		
+		
+	}
+		
+	.ansichten {
+		div[data-ce-columns='5']{
+			.ce-row{
+				.ce-column{
+					max-width: 15%;
+					
+					@include breakpoint(mopo){
+						max-width: 55%;
+						margin: 0 0.5rem;
+					}
+				}
+			}
+		}
+	}	
+}
+
+/* Korrektur für Verkauf auf Startseite */
+
+body.start{
+	#content{
+		.frame-soldBanner{
+			border: none;
+			height: inherit;
+			background: $colGreyBG;
+			padding: 0;
+			.ce-bodytext{
+				h3{
+					text-align: center;
+					margin: 0.5rem 1rem;
+					text-transform: uppercase;
+				}
+			}
+		
+			p {
+				margin: 0 1rem 1rem;
+				
+				&.intro {
+					@include Intro;
+					margin-bottom: 1rem;
+					
+					@include breakpoint(desklarge){
+						font-size: 1.35rem;
+						line-height: 2rem;
+					}
+				}
+				
+				&.goTo{
+					@include Intro;
+					bottom: 1rem;
+					text-align: right;
+					padding-bottom: 3rem;
+					
+					a{
+						position: absolute;
+						bottom: 1rem;
+						right: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.vertrieb,
+.frame-vertrieb {
+	background-color: $colGreyBG;
+	padding: 0;
+	text-align: center;
+	height: 100%;
+	@include breakpoint(mopo,max){
+		padding-bottom: 0.1rem;
+	}
+	
+	.ce-bodytext{
+		padding: 0 1rem 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	h3 {
+		color: $colSignature;
+		font-size: 1.25rem;
+	}
+	
+	h4 {
+		color: $colCopyfont;
+		font-size: 1.25rem;
+	}
+	
+	p,a{
+		font-size: 1rem;
+		line-height: normal;
+	}
+	
+	p{
+		margin-bottom: 0 !important;
+	}
+	
+	
+	img {
+		width: 100%;
+		height: auto;
+		display: inherit;
+	}
+}
+
+#asideRight {
+	.vertrieb,
+	.frame-vertrieb {
+		
+		@include breakpoint(mola){
+			width: 50%;
+			margin: 0 auto 1rem;
+		}
+		
+		@include breakpoint(tapo){
+			width: 50%;
+			margin: 0 auto 1rem;
+		}
+		
+		@include breakpoint(mopo){
+			width: 100%;
+			margin: 0 auto 1rem;
+		}
+		
+		margin-bottom: 1rem !important;
+	}
+}
+
+
+.frame-referenceTable{
+	table{
+		border: 1px solid $colSignature;
+		max-width: $maxWidth;
+		margin: 0 auto 1rem;
+		width: 70%;
+		
+		
+		@include breakpoint(tapo){
+			width: 100%;
+		}
+		
+		@include breakpoint(desksmall) {
+			width: 70%
+		}
+	}
+	
+	th.thead {
+		text-align: left;
+		padding-left: 1rem;
+	}
+	
+	thead {
+		background: $colSignature;
+		color: white
+	}
+
+	
+	td{
+		text-align: left;
+		padding-left: 1rem;
+		font-weight: 300;
+		
+		&:last-child{
+			text-align: left;
+		}
+	}
+	
+	@include breakpoint(mopo,max) {
+		table, thead, tbody, th, td, tr { 
+			display: block; 
+		}
+		
+		table {
+			width: calc(100% - 1rem);
+			margin: 0 0.5rem;
+			
+			font-size: 1.15rem;
+		}
+		
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		
+		td { 
+			/* Behave  like a "row" */
+			border: none;
+			position: relative;
+			padding-left: 35%; 
+			
+			&:before { 
+				/* Now like a table header */
+				position: absolute;
+				/* Top/left values mimic padding */
+				top: 0;
+				left: 0.5rem;
+				width: 35%; 
+				padding-right: 1,5rem;
+				font-weight: 700; 
+				white-space: nowrap;
+			}
+			
+			&:nth-of-type(1):before { content: "Objekt"; }
+			&:nth-of-type(2):before { content: "Anzahl"; }
+			&:nth-of-type(3):before { content: "Bauzeit"; }
+			&:nth-of-type(4):before { content: "Volumen"; }
+			&:nth-of-type(5):before { content: "verfügbar"; }
+		}
+	}
+}
+
+
+
+
+
+
+#content{
+	.frame-img50{
+		img {
+			width: 50%;
+			height: auto;
+			margin: 0 auto;
+			
+			@include breakpoint(mopo,max){
+				width: 100%;
+			}
+		}
+	}	
+}
+
+
+.frame-twoColOffset{
+		@include breakpoint(tapo, min){
+			.twoCol.cols6633{
+				padding-left: 16.5%;
+				li {
+					padding: 0
+				}
+			}
+			.rightCol{
+				margin-left: -15rem;
+				margin-top: 5rem;
+				box-shadow: 5px 5px 10px gray;
+				.ce-media{
+					margin-bottom: 0;
+				}
+			}
+		}
+}
+
+
+
+.frame-projektstart{
+	position: relative;
+	overflow: hidden;
+	&:after{
+		content: 'Projektstart!';
+		background-color: $colSignature2;
+		margin: 0 auto;
+		position: absolute;
+		transform: rotate(-20deg);
+		color: white;
+		text-align: center;
+		box-shadow: 3px 3px 5px $colShadow;
+		text-transform: uppercase;
+		z-index: 3;
+		padding: 1rem 7rem;
+		font-size: 1rem;
+		top: 0.5rem;
+		left: -6rem;
+		
+		
+		@include breakpoint(desksmall){			
+			padding: 1rem 11rem;
+			font-size: 2rem;
+			top: 2rem;
+			left: -7rem;
+			
+		}
+	}
+}
+
+.frame-60prozent{
+	position: relative;
+	overflow: hidden;
+	&:after{
+		content: '60% verkauft!';
+		background-color: $colSignature2;
+		margin: 0 auto;
+		position: absolute;
+		transform: rotate(-20deg);
+		color: white;
+		text-align: center;
+		box-shadow: 3px 3px 5px $colShadow;
+		text-transform: uppercase;
+		z-index: 3;
+		padding: 1rem 7rem;
+		font-size: 1rem;
+		top: 0.5rem;
+		left: -6rem;
+		
+		
+		@include breakpoint(desksmall){			
+			padding: 1rem 11rem;
+			font-size: 2rem;
+			top: 2rem;
+			left: -7rem;
+			
+		}
+	}
+}
+
+
+#slider{
+	.frame-reservationAll{
+		@extend .frame-projektstart;
+		&:after{
+			content: 'Alle Einheiten reserviert';
+			font-size: 0.85rem;
+			top: 1.5rem;
+			@include breakpoint(desksmall){	
+				padding: 1rem 9rem;
+				font-size: 1rem;
+				top: 2rem;		
+			}
+		}
+	}
+	
+	.frame-soldAll{
+		@extend .frame-reservationAll;
+		&:after{
+			content: 'Alle Einheiten verkauft';
+		}
+	}
+}

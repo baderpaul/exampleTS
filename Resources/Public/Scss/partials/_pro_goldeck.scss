@@ -1,0 +1,410 @@
+/**************************************************************************/
+/************************ Definition der Variablen ************************/
+/**************************************************************************/
+
+$colGoldeck: rgba(8,0,43,1);
+$colGoldecklight: rgba(24,32,97,1);
+
+$colGoldeckTypo: rgba(50,50,50,1);
+
+$colGoldeckDarkTypo: rgba(100,100,100,1);
+$colGoldeckLightTypo: rgba(220,220,220,1);
+
+
+
+
+@mixin GoldeckGradient{
+	background: rgb(8,0,43);
+	background: linear-gradient(180deg, rgba(8,0,43,1) 0%, rgba(24,32,97,1) 100%);
+}
+
+
+
+
+body.pro_goldeck{
+
+	p,h2, h3, h4, h5,table{
+		color: $colGoldeckTypo;
+	}
+	
+	strong{
+		color: inherit;
+	}
+	
+	header {
+		@include breakpoint(tapo, max) {
+			margin: 0;
+		}
+	}
+
+
+
+
+/**************************************************************************/
+/******************************* Header Typo ******************************/
+/**************************************************************************/
+
+	background-color: white;
+	
+	.head,
+	footer {
+		@include GoldeckGradient();
+	}
+	
+	.head #call p,
+	.head #call p a[href^="tel"],
+	.head #mail a {
+		color: $colGoldeckLightTypo;
+		font-size: 1rem;
+	}
+	
+	
+	.stellarnav {
+		li {
+			a {
+				color: $colGoldeckLightTypo;
+			}
+			
+			li {
+				a {
+					color: $colGoldeckDarkTypo;
+				}
+			}
+		}
+		
+		li.has-sub > a::after {
+			border-top: 8px solid $colGoldeckLightTypo;
+		}
+		
+		.menu-toggle{
+			color: $colGoldeckLightTypo;
+		}
+		
+		&.mobile > ul > li > a {
+			color: $colGoldeckDarkTypo;
+		}
+	}
+
+/****************************************************************************/
+/**************************** Typografie Footer *****************************/
+/****************************************************************************/
+
+
+	footer li, footer a{
+		color: $colGoldeckLightTypo !important;
+	}
+	
+	footer{
+		nav{
+			ul{
+				li{
+					border-right-color: $colGoldeckLightTypo;
+					a:link,a:visited,a:active {
+						color: $colGoldeckLightTypo !important;
+					}
+				}
+			}
+		}
+		.fa-brand-icons{
+			filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(54deg) brightness(122%) contrast(98%);
+		}
+	}
+
+ /****************************************************************************/
+ /**************************** Abstand Content anpassen *****************************/
+ /****************************************************************************/
+
+	.margintop,
+		#contentWrapper{	
+		//	@include breakpoint(mopo, max){
+		//		margin-top: 0rem;
+		//	}	
+		
+		//	@include breakpoint(mola){
+		//		margin-top: 7rem;
+		//	}
+		
+		//	@include breakpoint(tapo){
+		//		margin-top: 0;
+		//	}
+		
+		//	@include breakpoint(tala){
+		//		margin-top: 13rem;
+		//	}
+			
+			@include breakpoint(desksmall){
+				margin-top: 17rem;
+			}
+		}
+
+
+/**************************************************************************/
+/********************************* Claim **********************************/
+/**************************************************************************/
+
+#content{
+	.claim {
+		margin: 5rem auto;
+		
+		@include breakpoint(mopo){
+			margin: 0rem auto;
+		}	
+		
+		
+		h2, p{
+			color: $colGoldeckTypo;
+		}
+		
+		
+		h2{
+			font-size: 3.5rem;
+			letter-spacing: 0.2rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		
+		p{
+			font-style: italic;
+		}
+	}
+}
+
+
+/**************************************************************************/
+/*************************** Click-enlargement ****************************/
+/**************************************************************************/
+
+
+	figcaption {
+		padding: 0;
+		background: transparent;
+	}
+
+
+
+
+
+/**************************************************************************/
+/******************** Auflistung 3-Spaltig & 4-Spaltig ********************/
+/**************************************************************************/
+
+	#content .frame-sale {
+		@include GoldeckGradient();
+		
+			h2,h3,h4,p,a{
+				color: $colGoldeckLightTypo;
+			}
+			
+		}
+
+
+/**************************************************************************/
+/*************************** Spalte "Vertrieb" ****************************/
+/**************************************************************************/
+
+
+	.frame-vertrieb {
+		h2,h3,h4,p{
+			color: $colGoldeckDarkTypo;
+		}
+	}
+
+
+
+/**************************************************************************/
+/***************************** Blauer Rahmen ******************************/
+/**************************************************************************/
+	#content {
+		.frame-blueborder,
+		.frame-blueborder70,
+		.frame-soldBanner,
+		.frame-reservationBanner{
+			border: 5px double;
+			border-color: $colGoldeck;
+			box-shadow: 5px 5px 5px grey;
+			padding-bottom: 0;
+			.twoCol{
+				margin-bottom: 0;
+				
+				.frame-type-table:last-child{
+					.ce-table{
+						margin-bottom: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+
+/**************************************************************************/
+/*************************** Tabelle Wohnflächen **************************/
+/**************************************************************************/
+
+	.contenttable {
+		border-bottom: 1px solid $colGoldeckTypo;
+	}
+	
+	.ce-table{
+		border-collapse: collapse;
+		margin-bottom: 2rem;
+		
+		tr:last-child td{
+		border-top: 1px solid $colGoldeckTypo;			
+		}
+		
+		td{
+			font-size: 1.2rem;
+			line-height: inherit;
+
+
+			@include breakpoint(tapo){
+				font-size: 0.8rem;
+				line-height: 0.9rem;
+			}
+			
+			@include breakpoint(desksmall){
+				font-size: 1.2rem;
+				line-height: inherit;
+			}
+		}
+		
+	}
+
+
+/**************************************************************************/
+/*************************** Tabelle Wohnflächen **************************/
+/**************************************************************************/
+
+.wohnungsfinder {
+	table{
+		border-bottom: 0;
+		td:first-child{
+			width: 40%;
+		}
+		td:last-child{
+			width: 20%;
+		}
+		
+	}
+}
+
+
+/**************************************************************************/
+/******************************** Fact Icons ******************************/
+/**************************************************************************/
+
+	#content{
+		.frame-factIcons{
+			.ce-row{
+				justify-content: space-between;
+				.ce-column{
+					figcaption{
+						margin-top: 0.5rem;
+						font-size: 1rem;
+						color: $colGoldeckTypo;
+					}
+				}
+			}
+		}
+	}
+
+
+
+/**************************************************************************/
+/********************************* Lightbox *******************************/
+/**************************************************************************/
+
+	.mfp-figure::after {
+		background: $colGoldeck;
+	}
+
+/**************************************************************************/
+/***************************** Text im Bild 50% ***************************/
+/**************************************************************************/
+
+	#content .frame-img50 {
+		.ce-intext.ce-right .ce-gallery {
+			width: 25%;
+			
+			img{
+				width: 100%;
+			}
+			
+			@include breakpoint(mopo,max){
+				width: 100%;
+			}
+		}
+	}
+
+
+/****************************************************************************/
+/********************* Abstände zwischen den Elementen **********************/
+/****************************************************************************/
+
+	#slider {
+		margin-bottom: 3rem;
+		@include breakpoint(mopo,max){
+			margin-bottom: 1rem !important;
+		}	
+	}
+
+
+/****************************************************************************/
+/********************* Reserviert/Verkauft Störer **********************/
+/****************************************************************************/
+
+	#content{
+		.frame-soldBanner,
+		.frame-reservationBanner{
+			border-color: $colGoldeckTypo;
+		}
+	}
+
+
+/***************************************************************************/
+/*************************** Lightbox anpassen *****************************/
+/***************************************************************************/
+
+#lightboxOverlay{
+	@include GoldeckGradient();
+}
+
+	.lb-outerContainer{
+		@include GoldeckGradient()
+	}
+
+
+
+
+  /***************************************************************************/
+	/*************************** Wohnungsfinder *****************************/
+	/***************************************************************************/
+
+	.wohnungsfinder{
+		table	{
+			background-color: $colGreyBG;
+			
+			td {
+				padding: 2px 4px;
+				border-bottom: 1px solid white;
+				&:last-child{
+					border-bottom: none;
+				}
+				&.sold{
+					background-color: $colSignature2;
+					color: white;
+				}
+				
+				&.reserved{
+					background-color: $colSignature;
+					color: white;
+					a {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+
+	
+} // Body-Tag schließen

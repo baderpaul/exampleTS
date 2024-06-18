@@ -1,0 +1,7 @@
+
+
+plugin.tx_csseo.structureddata.search.enable = 1
+plugin.tx_csseo.structureddata.breadcrumb.enable = 0
+plugin.tx_csseo.sitetitle = auf adams-immobilien.de
+plugin.tx_csseo.tracking.googleAnalytics = UA-30793822-1
+plugin.tx_csseo.tracking.googleTagManager = GTM-MT9QC25

@@ -1,0 +1,21 @@
+#########################################################################
+###################### Projektlogo aus Seiteneigenschaften
+#########################################################################
+
+projektlogo = FILES
+projektlogo{
+	references {
+		data = levelmedia:-1, slide
+		listNum = 0
+	}
+	
+	renderObj = COA
+	renderObj {
+		20 = IMAGE
+		20 {
+			file.import.data = file:current:publicUrl
+			params = class="headerlogo"
+			stdWrap.typolink.parameter = 1
+		}
+	}
+}

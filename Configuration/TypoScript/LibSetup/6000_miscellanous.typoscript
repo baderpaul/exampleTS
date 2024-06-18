@@ -1,0 +1,3 @@
+// Die Stiped Table Klasse von Tabllen für das Rendering freischalten
+
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list = contenttable, stripedtable

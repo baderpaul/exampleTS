@@ -1,0 +1,181 @@
+<!-- {namespace v=FluidTYPO3\Vhs\ViewHelpers} -->
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{gallery.rows}">
+	<div class="ce-gallery{f:if(condition: data.imageborder, then: ' ce-gallery-border')}" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
+		<f:if condition="{gallery.position.horizontal} == 'center'">
+			<div class="ce-outer">
+				<div class="ce-inner">
+		</f:if>
+		<f:for each="{gallery.rows}" as="row">
+			<div class="ce-row">
+				<f:for each="{row.columns}" as="column">
+					<f:if condition="{column.media}">
+						<f:switch expression="{gallery.count.columns}">
+							<f:case value="1">
+								<div class="ce-column oneColumn">
+							</f:case>
+							<f:case value="2">
+								<div class="ce-column twoColumns" >
+							</f:case>
+							<f:case value="3">
+								<div class="ce-column threeColumns" >
+							</f:case>
+							<f:case value="4">
+								<div class="ce-column fourColumns" >
+							</f:case>
+							<f:case value="5">
+								<div class="ce-column fiveColumns" >
+							</f:case>
+							
+							<f:defaultCase>
+								<div class="ce-column elseColumns">
+							</f:defaultCase>
+						</f:switch>
+						
+						<f:if condition="{column.media.description}">
+							<f:then>
+								<figure class="ce-media">
+							</f:then>
+							<f:else>
+								<div class="ce-media">
+							</f:else>
+						</f:if>
+	
+						<f:switch expression="{column.media.type}">
+							<f:case value="3">
+								<f:render section="audioType" arguments="{_all}" />
+							</f:case>
+							
+							<f:case value="4">
+									<f:render section="videoType" arguments="{_all}" />
+							</f:case>
+							
+							<f:defaultCase>
+								<f:render section="imageType" arguments="{_all}" />
+							</f:defaultCase>
+						</f:switch>
+	
+						<f:if condition="{column.media.description}">
+							<f:then>
+									<figcaption class="textpic_figcaption">
+										{column.media.description}
+									</figcaption>
+								</figure>
+							</f:then>
+							<f:else>
+								</div>
+							</f:else>
+						</f:if>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+		</f:for>
+
+		
+		<f:if condition="{gallery.position.horizontal} == 'center'">
+				</div>
+			</div>
+		</f:if>
+	
+	</div>
+</f:if>
+
+
+
+<f:section name="imageType">
+	<f:if condition="{column.media.link}">
+		<f:then>
+			<f:link.typolink parameter="{column.media.link}" class="<v:condition.string.contains haystack='{column.media.link}' needle='file:'>image-link image-link--file</v:condition.string.contains>">
+				<f:render section="media" arguments="{column: column, isImage: 1, columnCount: gallery.count.columns, verticalPosition: gallery.position.vertical, gridColumn: data.tx_gridelements_columns, parentGridColumn: data.parentgrid_tx_gridelements_columns, frameClass: data.frame_class }" />
+			</f:link.typolink>
+		</f:then>
+		<f:else>
+			<f:if condition="{data.image_zoom}">
+				<f:then>
+					<ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
+						<f:render section="media" arguments="{column: column, isImage: 1, columnCount: gallery.count.columns, verticalPosition: gallery.position.vertical, gridColumn: data.tx_gridelements_columns, parentGridColumn: data.parentgrid_tx_gridelements_columns }" />
+					</ce:link.clickEnlarge>
+				</f:then>
+				<f:else>
+					<f:render section="media" arguments="{column: column, isImage: 1, columnCount: gallery.count.columns, verticalPosition: gallery.position.vertical, gridColumn: data.tx_gridelements_columns, parentGridColumn: data.parentgrid_tx_gridelements_columns, frameClass: data.frame_class }" />
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="audioType">
+	<f:render section="media" arguments="{_all}" />
+</f:section>
+
+<f:section name="videoType">
+		<f:render section="media" arguments="{_all}" />
+</f:section>
+
+<f:section name="media">
+	<f:if condition="{isImage}">
+		<f:then>
+			<f:switch expression="{gridColumn}">
+
+				<f:comment>100% Breite</f:comment>
+				
+				<f:comment>Zweispaltig</f:comment>
+				<f:case value="211">
+						<f:render partial="ResponsiveImages/ImagesInside50PercentCol" arguments="{_all}" />
+				</f:case>
+
+				<f:case value="212">
+					<f:render partial="ResponsiveImages/ImagesInside50PercentCol" arguments="{_all}" />
+				</f:case>
+				
+				
+				<f:comment>Dreispaltig</f:comment>
+				<f:case value="311">
+					<f:render partial="ResponsiveImages/ImagesInside33PercentCol" arguments="{_all}" />
+				</f:case>
+
+				<f:case value="312">
+					<f:render partial="ResponsiveImages/ImagesInside33PercentCol" arguments="{_all}" />
+				</f:case>
+
+				<f:case value="313">
+					<f:render partial="ResponsiveImages/ImagesInside33PercentCol" arguments="{_all}" />
+				</f:case>
+				
+				<f:comment>Vierspaltig</f:comment>
+				<f:case value="411">
+					<f:render partial="ResponsiveImages/ImagesInside25PercentCol" arguments="{_all}" />
+				</f:case>
+
+				<f:case value="412">
+					<f:render partial="ResponsiveImages/ImagesInside25PercentCol" arguments="{_all}" />
+				</f:case>
+
+				<f:case value="413">
+					<f:render partial="ResponsiveImages/ImagesInside25PercentCol" arguments="{_all}" />
+				</f:case>
+				
+				<f:case value="414">
+					<f:render partial="ResponsiveImages/ImagesInside25PercentCol" arguments="{_all}" />
+				</f:case>
+				
+				<f:case value="0">
+					<f:render partial="ResponsiveImages/ImagesInside100PercentCol" arguments="{_all}" />
+				</f:case>
+
+				<f:defaultCase>
+					<f:render partial="ResponsiveImages/ImagesInside100PercentCol" arguments="{_all}" />
+				</f:defaultCase>
+				
+				
+			</f:switch>
+		</f:then>
+		
+		<f:else>
+			<f:render partial="Media/Type" arguments="{file: column.media, dimensions: column.dimensions, data: data, settings: settings}" />
+		</f:else>
+	</f:if>
+</f:section>
+</html>

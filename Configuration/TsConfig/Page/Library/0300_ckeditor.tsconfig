@@ -1,0 +1,3 @@
+RTE.config.tt_content.bodytext.preset = sym_cke_preset
+
+//RTE.default.proc.allowedClasses := addToList(align-left,a-call,a.gtm_call,h3.priceSale,p.priceSaleCopytext,sp-signature,stickToBottom)

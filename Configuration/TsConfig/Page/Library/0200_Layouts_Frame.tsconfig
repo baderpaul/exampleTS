@@ -1,0 +1,68 @@
+########################################################################
+###################### Eigene Layouts angeben ##########################
+########################################################################
+
+TCEFORM {
+	tt_content {
+		layout {
+			altLabels {
+				1 = 70% Breite
+
+				3 = Blau 100%
+				4 = Blau 100% mit Bild
+
+				6 = Blau 70% mit Bild
+				7 = Orange 100%
+				8 = Orange 100% mit Blid
+				9 = Orange 70%
+				10 = Orange 70% mit Bild
+
+				18 = FactIcons
+				19 = Ansichten
+				
+				22 = Störer "Reserviert"
+				24 = Blauer Rahmen Sale "Verkauft"
+				25 = Blauer Rahmen Sale 70%
+			}
+			
+			removeItems = 2
+		}
+		
+		imagecols {
+			removeItems = 6,7,8
+		}
+		
+		frame_class {
+			removeItems = ruler-before, ruler-after, indent, indent-left, indent-right
+			addItems {
+				teaser                    = Teaser
+				width70                   = 70% Breite
+				width50                   = 50% Breite
+				signature                 = Blau
+				signature70               = 70% Breite Blau
+				vertrieb                  = Vertrieb
+				claim                     = Claim
+				sale                      = Sale
+				sale_sold                 = Alle Einheiten verkauft
+				soldBanner                = Verkauft!
+				reservationBanner         = Reserviert
+				img50                     = Bild 50% Breite
+				blueborder                = Blauer Rahmen
+				blueborder70              = Blauer Rahmen 70%
+				referenceTable            = Tabelle Referenzen
+				factIcons                 = Fact Icons
+				twoColOffset              = Grid 2 Offset
+				projektstart              = Projektstart
+				60prozent                 = 60 Prozent verkauft
+				reservationAll            = Alle Einheiten reserviert Slider
+				soldAll                   = Alle Einheiten verkauft Slider
+			}
+		}
+		
+	
+	}
+}
+
+
+
+

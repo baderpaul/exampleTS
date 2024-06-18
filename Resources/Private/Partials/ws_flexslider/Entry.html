@@ -1,0 +1,42 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:section name="Entry">
+
+    <li>
+        <div class="slidercontent wsflexslider-{item.styleclass}">
+            <f:if condition="{item.falImage}">
+               
+                
+                <picture class="Slider">
+			<source srcset="{f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:26rem)"/>
+			<source srcset="{f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+			<source srcset="{f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'768', cropVariant:'tablet_portrait')} 1x, {f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'1536', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+			<source srcset="{f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'1024', cropVariant:'teaser')} 1x, {f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'2048', cropVariant:'teaser')} 2x" media="(max-width:64rem)" media="(max-width:64rem) 2x"/>
+			<source srcset="{f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'1366', cropVariant:'teaser')} 1x, {f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'2732', cropVariant:'teaser')} 2x" media="(max-width:84rem)"/>
+			<source srcset="{f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'1920', cropVariant:'teaser')} 1x, {f:uri.image(src:'{item.falImage.uid}', treatIdAsReference:'1', maxWidth:'3840', cropVariant:'teaser')} 2x" media="(min-width:84rem)"/>
+			<img src="{f:uri.image(src:'{item.falImage.uid}', maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'teaser')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" width="{dimensions.width}" height="{dimensions.height}" loading="{settings.media.lazyLoading}" />
+		</picture>
+
+                
+
+            </f:if>
+            <div class="caption-wrapper caption-align-{item.textposition}">
+                <div class="caption-text">
+                    <p class="caption-title">{item.title}</p>
+                    <f:if condition="{item.description}">
+                        <div class="caption-body"><f:format.html>{item.description}</f:format.html></div>
+                    </f:if>
+                </div>
+                <f:if condition="{item.link}">
+                    <div class="caption-link">
+                        <f:link.typolink parameter="{item.link}"><f:translate key="more">More</f:translate></f:link.typolink>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+    </li>
+
+    </f:section>
+
+</div>

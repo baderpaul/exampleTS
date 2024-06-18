@@ -1,0 +1,53 @@
+/**************************************************************
+*********************** Breakpoints ***************************
+**************************************************************/
+$breakpoints:(
+	mopo:      26.75rem,
+	mola:      57.875rem,
+	tapo:      48rem,
+	tala:      64rem,
+	desksmall: 64.1rem,
+	desklarge: 100rem,
+);
+
+
+@mixin breakpoint($breakpoint: desksmall, $key: min, $orientation: false) {
+  
+  
+  @if ($orientation) {
+    @media (#{$key}-width: map-get($breakpoints, $breakpoint)) and (orientation : $orientation) {
+      @content;
+    }
+  }
+  
+  @else {
+    @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+
+
+
+
+@mixin Intro {
+	font: $Intro;
+	color: $colSignature;
+	a{
+		font: $Intro;
+		color: $colSignature;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
+
+@mixin outer-container {}
+
+@mixin span-columns($span) {}
+@mixin omega(){}

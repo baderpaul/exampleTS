@@ -1,0 +1,15 @@
+page {
+	includeCSS {
+		css = {$resDir}/Public/Css/00.styles.neu.css
+	}
+		
+	includeJS{
+		jquery = {$resDir}/Public/JavaScript/Dist/jquery-3.4.1.min.js	
+	}
+
+		
+	includeJSFooter {
+	    js_include = {$resDir}/Public/JavaScript/Dist/js_include-min.js
+	}
+
+}

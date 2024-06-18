@@ -1,0 +1,97 @@
+#########################################################################
+###################### Page-Objekt definieren
+#########################################################################
+
+page = PAGE
+page {
+	
+	10 = FLUIDTEMPLATE
+	10 {
+		layoutRootPath = {$resDir}/Private/Layouts/Page
+		partialRootPath = {$resDir}/Private/Partials/Page
+		
+		file.cObject = CASE
+		file.cObject {
+			key.data = levelfield:-1, backend_layout_next_level, slide
+			key.override.field = backend_layout
+			default = TEXT
+			default.value = {$resDir}/Private/Templates/Page/00_adams_content_template.html
+			
+			pagets__1 = TEXT
+			pagets__1.value = {$resDir}/Private/Templates/Page/00_adams_content_template.html
+
+			pagets__2 = TEXT
+			pagets__2.value = {$resDir}/Private/Templates/Page/00_adams_content_template.html
+			
+			pagets__5 = TEXT
+			pagets__5.value = {$resDir}/Private/TemplatesPage//04_adams_content_template_projekt.html
+			
+			pagets__6 = TEXT
+			pagets__6.value = {$resDir}/Private/Templates/Page/05_adams_content_template_projekt_1col.html
+			
+			pagets__7 = TEXT
+			pagets__7.value = {$resDir}/Private/Templates/Page/05_adams_content_template_projekt_1col.html
+			
+			pagets__8 = TEXT
+			pagets__8.value = {$resDir}/Private/Templates/Page/04_adams_content_template_projekt.html
+			
+			pagets__9 = TEXT
+			pagets__9.value = {$resDir}/Private/Templates/Page/05_adams_content_template_projekt_1col.html
+			
+			pagets__10 = TEXT
+			pagets__10.value = {$resDir}/Private/Templates/Page/04_adams_content_template_projekt.html
+		}
+		
+		variables {
+			layout = TEXT
+			layout {
+				data = levelfield:-1,backend_layout_next_level,slide
+				override.field = backend_layout
+			}
+			
+			navigation < nav
+			metanav < metanav
+			projektnav < projektnav
+			inhalt < inhalt
+			slider < slider
+			projektlogo < projektlogo
+			asideright < asideright
+			asideleft < asideleft
+			lib.mask_image < lib.mask_image
+			
+		}
+	}
+	
+	#Body-Tag modifizieren, damit die Backend-Layouts mit CSS angesprochen werden können    
+    bodyTagCObject = CASE
+    bodyTagCObject {
+    	stdWrap.wrap = <body class="|">
+    	key.data = levelfield:-1, backend_layout_next_level, slide
+    	key.override.field = backend_layout
+    	default = TEXT
+    	default.value = SliderContent
+    	
+    	pagets__1 < .default
+
+    	pagets__2 = TEXT
+    	pagets__2.value = start SliderContent
+    	
+    	pagets__5 = TEXT
+			pagets__5.value = projekt projektaside
+			    	
+    	pagets__6 = TEXT
+    	pagets__6.value = projekt
+    	
+    	pagets__7 = TEXT
+    	pagets__7.value = pro_dichterviertel
+
+    	pagets__8 = TEXT
+    	pagets__8.value = projektaside pro_dichterviertel
+			
+			pagets__9 = TEXT
+			pagets__9.value = pro_goldeck
+			
+			pagets__10 = TEXT
+			pagets__10.value = projektaside pro_goldeck
+	}
+}

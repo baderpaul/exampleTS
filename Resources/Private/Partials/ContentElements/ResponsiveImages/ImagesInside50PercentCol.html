@@ -1,0 +1,135 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<f:if condition="{verticalPosition} == 'intext'">
+	<f:then>
+		<f:if condition="{columnCount} == '1'">
+			<f:then>
+				<f:comment>1-spaltig im Text</f:comment>
+				<picture class="picIntextOneImage50">
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:24rem)"/>
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'768', cropVariant:'tablet_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1536', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'256', cropVariant:'tablet_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'512', cropVariant:'tablet_landscape')} 2x" media="(max-width:64rem)"/>
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'480', cropVariant:'desktop')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'960', cropVariant:'desktop')} 2x" media="(min-width:64rem)"/>
+					<img src="{f:uri.image(image: column.media, maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'teaser')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" />
+				</picture>
+			</f:then>
+			
+			<f:else>
+				<f:if condition="{columnCount} == '2'">
+					<f:then>
+						<f:comment>2-spaltig im Text</f:comment>
+						<picture class="picIntextTwoImages50">
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:24rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'768', cropVariant:'tablet_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1536', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'126', cropVariant:'tablet_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'256', cropVariant:'tablet_landscape')} 2x" media="(max-width:64rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'240', cropVariant:'desktop')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'480', cropVariant:'desktop')} 2x" media="(min-width:64rem)"/>
+							<img src="{f:uri.image(image: column.media, maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'teaser')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" />
+						</picture>
+					</f:then>
+				</f:if>	
+			</f:else>
+			
+			<f:else>
+				<f:if condition="{columnCount} == '3'">
+					<f:then>
+						<f:comment>2-spaltig im Text</f:comment>
+						<picture class="picIntextThreeImages50">
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:24rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'768', cropVariant:'tablet_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1536', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'171', cropVariant:'tablet_landscape')}" media="(max-width:64rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'320', cropVariant:'desktop')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'640', cropVariant:'desktop')} 2x" media="(min-width:64rem)"/>
+							<img src="{f:uri.image(image: column.media, maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'teaser')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" />
+						</picture>
+					</f:then>
+				</f:if>	
+			</f:else>
+		</f:if>
+	</f:then>
+	
+	
+	<f:else>
+		<f:if condition="{columnCount} == '1'">
+			<f:then>
+				<f:comment>1-spaltig über oder unter dem Text</f:comment>
+				<picture class="picOverTextOneImage50">
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:24rem)"/>
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'768', cropVariant:'tablet_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1536', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+					<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'512', cropVariant:'tablet_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1024', cropVariant:'tablet_landscape')} 2x" media="(max-width:64rem)"/>
+										<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'960', cropVariant:'desktop')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1920', cropVariant:'desktop')} 2x" media="(min-width:64rem)"/>
+					<img src="{f:uri.image(image: column.media, maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'teaser')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" loading="{settings.media.lazyLoading}" />
+				</picture>
+			</f:then>
+			
+			<f:else>
+				<f:comment>2-spaltig über oder unter dem Text</f:comment>
+				<f:if condition="{columnCount} == '2'">
+					<f:then>
+						<picture class="picOverTextTwoImages50">
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:24rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+							
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'384', cropVariant:'tablet_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'768', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'256', cropVariant:'tablet_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'512', cropVariant:'tablet_landscape')} 2x" media="(max-width:64rem)"/>
+							<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'480', cropVariant:'desktop')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'960', cropVariant:'desktop')} 2x" media="(min-width:64rem)"/>
+							<img src="{f:uri.image(image: column.media, maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'teaser')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" />
+							</picture>
+					</f:then>
+					<f:else>
+						<f:comment>3-spaltig über oder unter dem Text</f:comment>
+						<f:if condition="{columnCount} == '3'">
+							<f:then>
+								<picture class="picOverTextThreeImages50">
+									<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:24rem)"/>
+									<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+									<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'256', cropVariant:'tablet_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'512', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+									<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'342', cropVariant:'tablet_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'684', cropVariant:'tablet_landscape')} 2x" media="(max-width:64rem)"/>
+									<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'456', cropVariant:'desktop')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'912', cropVariant:'desktop')} 2x" media="(min-width:64rem)"/>
+									<img src="{f:uri.image(image: column.media, maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'teaser')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" />
+								</picture>
+							</f:then>
+							
+							
+							<f:else>
+								<f:comment>4-spaltig über oder unter dem Text</f:comment>
+								<f:if condition="{columnCount} == '4'">
+									<f:then>
+										<picture class="picOverTextFourImages">
+											<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:24rem)"/>
+											<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+											<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'256', cropVariant:'tablet_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'512', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+											<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'342', cropVariant:'tablet_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'684', cropVariant:'tablet_landscape')} 2x," media="(max-width:64rem)"/>
+											<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'640', cropVariant:'desktop')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1280', cropVariant:'desktop')} 2x " media="(min-width:64rem)"/>
+											<img src="{f:uri.image(image: column.media, maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'desktop')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" />
+										</picture>
+									</f:then>
+									
+									<f:else>
+									
+									<f:comment>5-spaltig über oder unter dem Text</f:comment>
+									<f:if condition="{columnCount} == '5'">
+										<f:then>
+											<picture class="picOverTextFiveImages">
+												<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'375', cropVariant: 'mobile_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'750', cropVariant: 'mobile_portrait')} 2x" media="(max-width:24rem)"/>
+												<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'667', cropVariant: 'mobile_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1334', cropVariant: 'mobile_landscape')} 2x" media="(max-width:41.6875rem)"/>
+												<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'256', cropVariant:'tablet_portrait')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'512', cropVariant:'tablet_portrait')} 2x" media="(max-width:48rem)"/>
+												<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'342', cropVariant:'tablet_landscape')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'684', cropVariant:'tablet_landscape')} 2x," media="(max-width:64rem)"/>
+												<source srcset="{f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'640', cropVariant:'desktop')} 1x, {f:uri.image(image: column.media, treatIdAsReference:'1', maxWidth:'1280', cropVariant:'desktop')} 2x " media="(min-width:64rem)"/>
+												<img src="{f:uri.image(image: column.media, maxWidth: '800c', treatIdAsReference:'1', cropVariant: 'desktop')}" alt="{column.media.alternative}" desc="{column.media.description}" title="{column.media.title}" />
+											</picture>
+										</f:then>
+									</f:if>
+									</f:else>
+								</f:if>
+							</f:else>
+						</f:if>
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>

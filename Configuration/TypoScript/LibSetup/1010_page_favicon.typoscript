@@ -1,0 +1,4 @@
+page {
+	#Ein Favicon einfügen
+	shortcutIcon = {$resDir}/Public/Icons/favicon.ico
+}

@@ -1,0 +1,271 @@
+/***********************************************************************************
+	                        			Powermail  
+************************************************************************************/
+
+
+div.tx-powermail {
+	
+	H2 {
+		text-align: center;
+		color: white;
+	}
+}
+
+.powermail_legend {
+	display: none;
+}
+
+.powermail_field {
+	input{
+		line-height: 2rem;
+		margin: 0 0 2rem;
+		padding: 0.25rem;
+		width: calc(100% - 1rem);
+		@include breakpoint(mopo, max){
+			width: 100%;
+		}
+		
+		&.powermail_checkbox{
+			margin: 0 0.5rem 0 0;
+			padding: 0;
+			width: inherit;
+		}
+	}
+	
+	textarea {
+		width: calc(100% - 2rem);
+		height: 10em;
+		padding: 0.5rem 1rem;
+		resize: none;
+		@include breakpoint(mopo,max){
+			width: 100%;
+		}
+	}
+	
+	.powermail_submit,
+	.powermail_reset {
+		text-align: center;
+		color: $colBase;
+		border: 1px solid #CCCCCC;
+		padding: 1em 0;
+		background: $colSignature;
+		width: 50%;
+		margin: 1rem auto 0;
+		cursor: pointer;
+		@include breakpoint(mopo,max){
+			width: 100%;
+		}
+	}
+}
+
+.powermail_fieldwrap_type_submit{
+	text-align: center;
+	
+}
+
+.powermail_fieldwrap {
+	line-height: 3rem;
+}
+
+
+
+.powermail_label{
+	display: none;
+}
+
+
+.powermail_check_outer {
+
+}
+
+.powermail_check_inner {
+	margin-top: 0 !important;
+	line-height: 3rem;
+	float: left;
+	width: 33%;
+}
+
+
+.powermail_field_error_container {
+	margin: 0 !important;
+}
+
+.powermail_fieldwrap_submit {
+	float:left !important;
+	width: 100%;
+	clear: none !important;
+	padding-left: 0 ;
+	input {
+		width: 100% !important;
+	}
+}
+
+.powermail_fieldwrap_reset {
+	width: 50% !important;
+	float: left;
+	padding-right: 2rem;
+	input {
+		width: 100% !important;
+	}
+}
+
+fieldset {
+	padding: 1rem;
+}
+
+
+fieldset legend.powermail_label.powermail_check_legend {
+	width: 100% !important;
+	margin: 1rem 0;
+}
+
+
+
+/******************** Dropdown gestalten **************/
+
+
+
+.tx-powermail{
+	
+	.powermail_fieldwrap_type_select{
+		label{
+			display: inherit;
+		}
+	}
+	
+	
+	select {
+		appearance: none;
+		border: none;
+		margin-bottom: 2rem;
+		outline: none;
+		cursor: pointer;
+		width: 100%;
+		padding: 0.5rem 0rem 0.5rem 1.5rem;
+		background: $colGreyBG;
+		color: $colGreyBG2;
+		font: italic 300 1.25rem/2rem $copyfont;
+		
+		&::-ms-expand {
+		  display: none;
+		}
+		
+		&:focus::-ms-value {
+			background-color: transparent;
+		}
+				
+		option{
+			margin-bottom: 0.5rem;
+			color: $colGreyBG2;
+			padding-left: 0.75rem;
+		}
+		
+
+	}
+	
+	.selectbox{
+		&:before{
+			content: '\f0d7';
+			font-family: 'FontAwesome';
+			position: absolute;
+			padding-top: 0.35rem;
+			padding-left: 0.25rem;
+			pointer-events: none;
+			color: $colGreyBG2;
+
+		}
+	}
+}
+
+
+
+
+
+
+
+/**************************************************************************/
+/********************** Styling der Powermail-Typo
+/*************************************************************************/
+
+
+
+.tx-powermail {
+	
+	legend{
+		font: 300 1.5rem/2rem $copyfont;
+		font-style: italic;
+		color: $colSignature;
+		margin-bottom: 1rem;
+	}
+	
+	label {
+		font: 300 1.25rem $copyfont;
+		color: $colSignature; 
+	}
+	.powermail_field {
+		font: italic 300 1.25rem/2rem $copyfont;
+		color: $colSignature;
+	}
+	
+	input,
+	textarea {
+		font: italic 300 1.25rem/2rem $copyfont;
+		color: $colCopyfont;
+
+	}
+	
+	input [type="checkbox"] {
+		font-size: 2rem;
+	}
+	
+	dl,
+	dt,
+	dd {
+		font:  300 1.25rem/2rem $copyfont;
+		color: $colSignature; 
+	}
+	
+	dt {
+		display: block;
+		width: 20%;
+		float: left;
+	}
+	
+	
+	
+	
+// 	 Korrektur bei Datenschutz nicht kursiv 
+	.powermail_fieldwrap_type_html{
+		.powermail_field{
+			font-style: normal; 
+		}
+	}
+}
+
+
+
+
+
+
+/**************************************************************************/
+/********************** Styling der Fehlermeldungen
+/*************************************************************************/
+
+.parsley-errors-list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li{
+		color: $colSignature2;
+		margin: -2rem 0 2rem;
+	}
+}
+
+
+.powermail_fieldwrap_type_check{
+	.parsley-errors-list{
+		li{
+			margin: 0 0 2rem;
+		}
+	}
+}

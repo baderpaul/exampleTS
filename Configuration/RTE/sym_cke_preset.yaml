@@ -1,0 +1,55 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+  config:
+    contentsCss: "EXT:eaw_t3115/Resources/Public/Css/99.ckeditor.min.css?v=9"
+    format_tags: "p;h1;h2;h3;h4;h5;pre"
+    stylesSet:
+        # custom block level style
+        - { name: "more", element: ['a'], attributes: { 'class': 'more' }}
+        - { name: "goTo", element: ['p'], attributes: { 'class': 'goTo' }}
+        - { name: "Intro", element: ['p'], attributes: { 'class': 'intro' }}
+        - { name: "FA Icons", element: ['p'], attributes: { 'class': 'fa-icons' }}
+        - { name: "FA Brand Icons", element: ['p'], attributes: { 'class': 'fa-brand-icons' }}
+        - { name: "Wohnungsfinder", element: ['table'], attributes: { 'class': 'wohnungsfinder' }}
+        - { name: "Wohnung reserviert", element: ['td'], attributes: { 'class': 'reserved' }}
+        - { name: "Wohnung verkauft", element: ['td'], attributes: { 'class': 'sold' }}
+        - { name: "Ohne", element: ['a','p','table','td'], attributes: { 'class': ''}}
+
+    toolbarGroups:
+      - { name: styles, groups: [ styles, format ] }
+      - { name: basicstyles, groups: [ basicstyles ] }
+      - { name: paragraph, groups: [ list, indent, blocks, align ] }
+      - { name: links, groups: [ links ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ table, specialchar ] }
+      - { name: document, groups: [ mode ] }
+    
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+    
+    extraPlugins:
+      - justify
+    
+    removePlugins:
+      - image
+    
+    removeButtons:
+      - Strike
+      - Anchor
+      - Outdent
+      - Indent
+      - Blockquote
+      - JustifyBlock
+    extraAllowedContent: "*(*)[*]"
+    
+    allowedContent: true
+    linkJavaScriptLinksAllowed: true

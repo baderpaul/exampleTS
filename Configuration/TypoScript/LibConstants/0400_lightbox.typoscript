@@ -1,0 +1,6 @@
+plugin{
+	jn_lighterbox {
+		albumLabel = Bild %1 von %2
+		alwaysShowNavOnTouchDevices = 1
+	}
+}

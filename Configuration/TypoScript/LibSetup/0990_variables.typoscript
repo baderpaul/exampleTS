@@ -1,0 +1,33 @@
+#########################################################################
+###################### Fluid-Template Variablen
+#########################################################################
+
+inhalt < styles.content.get
+inhalt.select.where = colPos = 0
+
+slider < styles.content.get
+slider { 
+	select.where = colPos = 11
+	stdWrap {
+		wrap = <div id="slider">|</div>
+		required = 1
+	}
+}
+
+asideleft < styles.content.get
+asideleft {
+	select.where = colPos = 22
+	stdWrap {
+		wrap = <li id="asideLeft">|</li>
+		required = 1
+	}
+}
+
+asideright < styles.content.get
+asideright {
+	select.where = colPos = 22
+	stdWrap {
+		wrap = <li id="asideRight">|</li>
+		required = 1
+	}
+}

@@ -1,0 +1,18 @@
+#########################################################################
+###################### Eigene Templates für Fluid styled Content
+#########################################################################
+lib.contentElement {
+	templateRootPaths {
+		200 = {$resDir}/Private/Templates/Fluidstyledcontent/
+	}
+	
+	layoutRootPaths {
+		200 = {$resDir}/Private/Layouts/Fluidstyledcontent/
+	}
+	
+	partialRootPaths {
+		200 = {$resDir}/Private/Partials/Fluidstyledcontent/
+	}
+}
+
+

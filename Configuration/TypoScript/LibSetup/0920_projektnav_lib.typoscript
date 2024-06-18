@@ -1,0 +1,52 @@
+#########################################################################
+###################### Navigation
+#########################################################################
+
+projektnav = HMENU
+projektnav {
+  special = directory
+  special.value = 48
+  
+  1 = TMENU
+  1 {
+    noBlur = 1
+    expAll = 1
+    collapse = 0
+    wrap =<ul class="sidenav-menu">|</ul>
+    
+    NO = 1
+    NO{
+      allStdWrap.dataWrap = <li>|</li>|*|<li>|</li>|*|<li>
+      ATagTitle.field = title // subtitle
+      ATagParams =
+    }
+
+    IFSUB = 1
+    IFSUB < .NO
+    IFSUB {
+    	allStdWrap.dataWrap = <li class="sub">|
+		linkWrap = <span class="sidenav-link-title">|</span><span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon> <i class="fa fa-caret-down"></i></span><span class="sidenav-dropdown-icon" data-sidenav-dropdown-icon><i class="material-icons">arrow_drop_up</i></span>
+		ATagBeforeWrap = 1    
+		ATagParams = data-sidenav-dropdown-toggle
+    }
+    
+    ACTIFSUB = 1
+    ACTIFSUB < .IFSUB
+
+     
+    ACT = 1
+    ACT < .NO
+    ACT{
+    	allStdWrap.dataWrap = <li class="aktiv">|
+    }  
+      
+
+ } 
+  
+  
+  2 < .1
+  2.wrap = <ul class="sidenav-dropdown" data-sidenav-dropdown>|</ul>
+  
+  2.NO.linkWrap = |
+
+}

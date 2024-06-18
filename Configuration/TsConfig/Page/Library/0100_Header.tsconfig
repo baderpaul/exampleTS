@@ -1,0 +1,12 @@
+########################################################################
+####################### Eigene Header angeben ##########################
+########################################################################
+
+TCEFORM.tt_content.header_layout {
+	  altLabels.1 = H1
+	  altLabels.2 = H2
+	  altLabels.3 = H2 zentriert
+	  altLabels.4 = H3
+	  altLabels.5 = H3 zentriert
+	  altLabels.100 = Headline verstecken
+}

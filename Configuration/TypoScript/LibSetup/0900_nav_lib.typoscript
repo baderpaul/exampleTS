@@ -1,0 +1,46 @@
+#########################################################################
+###################### Navigation
+#########################################################################
+
+nav = HMENU
+nav {
+  special = directory
+  special.value = 30
+  
+  1 = TMENU
+  1 {
+    noBlur = 1
+    expAll = 1
+    collapse = 0
+    wrap =<ul>|</ul>
+    
+    NO = 1
+    NO{
+      allStdWrap.dataWrap = <li>|</li>|*|<li>|</li>|*|<li>
+      ATagTitle.field = title // subtitle
+    }
+
+	IFSUB = 1
+    IFSUB < .NO
+    IFSUB {
+    	allStdWrap.dataWrap = <li>|
+    }
+    
+    ACTIFSUB = 1
+    ACTIFSUB < .IFSUB
+
+     
+    ACT = 1
+    ACT < .NO
+    ACT{
+    	allStdWrap.dataWrap = <li>|
+    }  
+      
+
+ } 
+  
+  
+  2 < .1
+  3 < .1
+  4 < .1
+}

@@ -1,0 +1,320 @@
+/*********************************************************************************
+***************************** Sliding Header *************************************
+**********************************************************************************/
+
+.head {
+	background-color: $colBase;
+    position: inherit;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    margin: 0 auto;
+	text-align: center;
+    transition: all .75s ease .15s;
+    text-align:center;
+	
+	@include breakpoint(mopo, max){
+		height: 8rem;
+	}
+
+	@include breakpoint(mola, min, landscape){
+		height: 0;
+//		position: inherit;
+	}
+	
+	@include breakpoint(tapo){
+		height: 10rem;
+		position: inherit;
+	}
+	
+	@include breakpoint(tala){
+		height: 13rem;
+		position: fixed;
+	}
+	
+	@include breakpoint(desksmall){
+		height: 14rem;
+		position: fixed;
+	}
+	
+	
+ 
+
+	#logo{
+		position: relative;
+		opacity: 1;
+		transition: all .75s ease .15s;
+		height: 6rem;
+		margin: 1.5rem 0;
+		
+		img {
+			transition: all .75s ease .15s;
+			width: auto;
+		}
+		
+		@include breakpoint(mopo, max, portrait){
+			margin: 2.5rem 0 0;
+			height: 2rem;
+			
+			img {
+				height: 2rem;
+			}
+		}
+		
+		@include breakpoint(mola, max, landscape){			
+			height: 2rem;
+			margin: 1rem 0 0.25rem;
+			img{
+				height: 2rem;
+			}
+		}
+		
+		@include breakpoint(tapo){
+			height: 3.5rem;
+			margin: 1.5rem;
+		    img{
+				height: 3.5rem;
+			}
+		}
+		
+		@include breakpoint(tala){
+			height: 4.5rem;
+			margin: 1.5rem 0;
+			
+			img{
+				height: 4.5rem;
+			}
+		}
+		
+		@include breakpoint(tala){
+			height: 6rem;
+			margin: 1.5rem 0;
+			
+			img{
+				height: 6rem;
+			}
+		}
+	}
+    
+    #call{
+		transition: all 0.75s ease .15s;
+		float: right;
+		position: absolute;
+		top: 3rem;
+		left: 4rem;
+
+		@include breakpoint(mopo, max){
+			top: 0.25rem;
+			left: 10%;
+			right: 10%;
+		}
+		
+		@include breakpoint(mola){
+			top: 0.25rem;
+			left: 10%;
+		}
+		
+		@include breakpoint(tala){
+			top: 3rem;
+			left: 2rem;
+		}
+		
+		
+		@include breakpoint(tapo){
+			top: 2rem;
+			left: 1.5rem;
+		}
+		
+		
+		@include breakpoint(desksmall){
+			top: 3rem;
+			left: 4rem;
+		}
+
+
+		p,a[href^=tel]{
+			transition: all 0.75s ease .15s;
+			padding: 0;
+			margin: 0;
+			color: $colSignature;
+			font-size: 1.15rem;
+			
+			@include breakpoint(mopo, max){
+				font-size: 0.75rem
+			}
+			
+			@include breakpoint(mola){
+				font-size: 0.75rem;
+			}
+
+			@include breakpoint(tapo){
+				font-size: 1.15rem;
+			}
+			
+	    
+		}
+    }
+    
+    #mail {
+   		transition: all 0.75s ease .15s;
+	    position: absolute;
+	    top: 3rem;
+	    right: 4rem;
+	    
+	    @include breakpoint(mopo, max){
+		    display: none;
+	    }
+	    
+	    @include breakpoint (mola){
+		    
+	    }
+	    
+	    @include breakpoint(tapo){
+		    top: 2rem;
+		    right: 1.5rem;
+	    }
+
+	    @include breakpoint(desksmall){
+		    top: 3rem;
+		    right: 4rem;
+	    }
+
+	    
+
+	    a {
+		    transition: all .75s ease .15s;
+		    font-size: 1.15rem;
+		    
+		    @include breakpoint(mopo, max){
+			    font-size: 0.75rem;
+		    }
+	    }
+    }
+    
+	&.shrink{
+// 		background-color: rgba($colBase,0.95);
+		opacity: 0.95;
+		
+		@include breakpoint(mopo, max){
+			height: 8rem;
+		}
+		
+		@include breakpoint(mola, min, landscape){
+		}
+		
+		@include breakpoint(tapo){
+			height: 9rem;
+		}
+		
+		@include breakpoint(tala){
+			height: 9rem;
+		}
+		
+		@include breakpoint(desksmall){
+			height: 8rem;
+		}
+		
+		#logo{
+			height: 2.5rem;
+			margin-top: 1rem;
+			margin-bottom: 0.75rem;
+			img {
+				height: 2.5rem;
+				width: auto;
+			}
+			
+			@include breakpoint(mopo, max){
+				margin: 2.5rem 0 0;
+				height: 2rem;
+				img{
+					height: 2rem;
+				}
+			}
+			
+			@include breakpoint(mola, max, landscape){
+				height: 2rem;
+				margin: 1rem 0 0.25rem;
+	
+				img{
+					height:2rem;
+				}
+		    }
+		    
+		    @include breakpoint (tapo){
+			    height: 3.5rem;
+			    margin: 1.5rem;
+			    img {
+					height: 3.5rem;
+			    }
+		    }
+			
+			@include breakpoint(tala){
+				height: 2.5rem;
+			}
+			
+			
+		}
+		
+		#call {			
+		    @include breakpoint(mopo, max){
+		    }
+
+		    @include breakpoint(mola){
+			    left: 2rem;
+		    }
+		    
+		    @include breakpoint(tapo){
+			    top: 2rem;
+		    }
+			@include breakpoint(tala){
+				top: 1.5rem;
+			}
+			
+			@include breakpoint(desksmall){
+				top: 2rem;
+				left: 4rem;
+			}
+		}
+		
+		#mail{
+			@include breakpoint(mopo, max){
+				
+			}
+	    
+		    @include breakpoint(mola){
+				top: 3rem;
+		    }
+
+		    @include breakpoint(tala){
+			    top: 1.5rem;
+		    }
+		    
+	    }
+	}
+    
+}
+
+
+.margintop,
+#contentWrapper{	
+	@include breakpoint(mopo, max){
+		margin-top: 0rem;
+	}	
+
+	@include breakpoint(mola){
+		margin-top: 7rem;
+	}
+
+	@include breakpoint(tapo){
+		margin-top: 0;
+	}
+
+	@include breakpoint(tala){
+		margin-top: 13rem;
+	}
+	
+	@include breakpoint(desksmall){
+		margin-top: 14rem;
+	}
+}

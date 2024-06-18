@@ -1,0 +1,9 @@
+styles {
+	content {
+		textmedia.maxW = 1366
+		textmedia.maxWInText = 700
+		textmedia.linkWrap.width = 1920m
+		textmedia.linkWrap.height = 1000m
+		textmedia.linkWrap.lightboxEnabled = 1
+	}
+}

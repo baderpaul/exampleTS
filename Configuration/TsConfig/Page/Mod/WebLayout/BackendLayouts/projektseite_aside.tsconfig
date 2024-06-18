@@ -1,0 +1,45 @@
+#
+# BACKENDLAYOUT: Projektseite & Aside
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            5 {
+                icon = EXT:eaw_t3115/Resources/Public/Icons/be_projekte.png
+                title = Projektseite + Aside
+                config {
+                    backend_layout {
+                        colCount = 3
+                        rowCount = 2
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Slider
+                                        colspan = 3
+                                        colPos = 11
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Content
+                                        colspan = 2
+                                        rowspan = 2
+                                        colPos = 0
+                                    }
+                                    2 {
+                                        name = Aside
+                                        rowspan = 2
+                                        colPos = 22
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

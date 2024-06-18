@@ -1,0 +1,27 @@
+pageresource = FILES
+pageresource{
+	references {
+		data = levelmedia:-1, slide
+		listNum = 0
+	}
+	
+	renderObj = TEXT
+	renderObj {
+		typolink{
+			parameter.stdWrap{
+				cObject = IMG_RESOURCE
+				cObject {
+					file{
+						import.data = file:current:uid
+						cropVariant = teaser
+						treatIdAsReference =1
+						width = 1920
+					}
+				}
+			}
+			returnLast = url
+		}
+		wrap = background-image:url(|); background-position:center; background-size:cover; background-repeat:no-repeat;
+
+	}
+}

@@ -1,0 +1,23 @@
+{
+    "name": "spreadyourmind-werbeagentur-ug/eaw-t3115",
+    "type": "typo3-cms-extension",
+    "description": "Extension Template der EAW-Website",
+    "homepage": "https://spreadyourmind.de",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^11.5",
+        "typo3/cms-rte-ckeditor": "^11.5",
+        "typo3/cms-fluid-styled-content": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "SpreadyourmindWerbeagenturUg\\EawT3104\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "eaw_t3115"
+        }
+    }
+}

@@ -1,0 +1,167 @@
+/**************************************************************************/
+/********************** Typo3 Debugger über den Header setzen
+/*************************************************************************/
+.extbase-debugger{
+	z-index: 9999999999;
+}
+
+/**************************************************************************/
+/********************** box-sizing Reset
+/*************************************************************************/
+*{
+	box-sizing: border-box;
+}
+
+/**************************************************************************/
+/********************** Definition der Farben
+/*************************************************************************/
+
+$colBase:(white);                                    // Definition Basisfarbe Weiß
+$colSignature: (rgba(30,60,130,1));                  // Adams Blau
+$colSignature2: (rgba(170,55,20,1));                 // Akzentfarbe Orange
+$colCopyfont: (rgba(40,40,40,1));                    // Schriftfarbe Dunkelgrau
+$colGreyBG: (rgba(236,236,237,1));                   // Hellgrauer Hintergrund
+$colGreyBG2: (darken($colGreyBG,30));                  // Mittelgruaer Hintergrund
+$colGreyBG3: (darken($colGreyBG2,30));                  // Dunkelgrauer Hintergrund
+
+$colShadow: (rgba(30,30,30,0.8));                    // Dunkelgrau für Schatten
+
+/**************************************************************************/
+/********************** Import der Fonts
+/*************************************************************************/
+@import '../Css/font-awesome.min.css';
+
+/* Font Awesome Brands */
+@font-face {
+  font-family: 'FontAwesome Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../Fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../Fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/fontawesome-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../Fonts/fontawesome-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/fontawesome-webfont.svg#FontAwesome') format('svg'); /* Legacy iOS */
+}
+
+/* Font Awesome Brands */
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../Fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../Fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/fontawesome-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../Fonts/fontawesome-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/fontawesome-webfont.svg#FontAwesome') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-condensed-300 - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../Fonts/roboto-condensed-v16-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'),
+       url('../Fonts/roboto-condensed-v16-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/roboto-condensed-v16-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/roboto-condensed-v16-latin-300.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-condensed-300italic - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../Fonts/roboto-condensed-v16-latin-300italic.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'),
+       url('../Fonts/roboto-condensed-v16-latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/roboto-condensed-v16-latin-300italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-300italic.woff') format('woff'), /* Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/roboto-condensed-v16-latin-300italic.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../Fonts/roboto-condensed-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
+       url('../Fonts/roboto-condensed-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/roboto-condensed-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/roboto-condensed-v16-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-condensed-italic - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../Fonts/roboto-condensed-v16-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'),
+       url('../Fonts/roboto-condensed-v16-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/roboto-condensed-v16-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/roboto-condensed-v16-latin-italic.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-condensed-700 - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../Fonts/roboto-condensed-v16-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
+       url('../Fonts/roboto-condensed-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/roboto-condensed-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../Fonts/roboto-condensed-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/roboto-condensed-v16-latin-700.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+
+
+
+/**************************************************************************/
+/********************** Definition der Font-Variablen
+/*************************************************************************/
+
+$copyfont:('Roboto Condensed', sans_serif, Arial, Verdana, Helvetica);
+$headline:('Roboto Condensed', sans_serif, Arial, Verdana, Helvetica);
+
+$Copy:   (300 1rem/1.75rem $copyfont);
+$Head:   (300 2rem $headline);
+$Intro:  (italic 300 1.15rem/1.75rem $copyfont);
+$Subnav: (300 1.25rem $copyfont);
+
+
+
+
+/**************************************************************************/
+/********************** Definition Mixins
+/*************************************************************************/
+
+@mixin Headline(){
+	font: $Head;
+	color: $colSignature;
+}
+
+@mixin Intro(){
+  font: $Intro;
+  color: $colSignature;
+}
+
+
+/**************************************************************************/
+/********************** Definition Diverse Variablen
+/*************************************************************************/
+
+
+$maxWidth: 1366px;

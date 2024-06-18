@@ -1,0 +1,59 @@
+body {
+	&.SliderContentAsideRight,
+	&.projektaside{
+		#ContentAsideRight{
+			display: flex;
+			list-style: none;
+			margin: 0 auto;
+			
+			@include breakpoint(mopo,max){
+				flex-direction: column;
+				padding: 0 1rem;
+			}
+			
+			@include breakpoint(tapo){
+				padding: 0 1rem;
+			}
+			
+			@include breakpoint(desksmall){
+				flex-direction: row;
+				padding: 0;
+				width: 70%;
+			}
+
+			#content{
+				@include breakpoint(mopo,max){
+					flex: 0 1 auto;
+					margin-right: 0;
+				}
+							
+				@include  breakpoint(tapo){
+					flex: 0 1 auto;
+				}
+				
+				@include breakpoint(desksmall){
+					flex: 0 1 80%;
+					margin-right: 2rem;
+				}			
+			}
+			
+			#asideRight{
+				@include breakpoint(tapo){
+					width: 20%;
+				}
+			}
+			
+			#asideRight{				
+				h3{
+					font-size: 1.5rem;
+				}
+				
+				.vertrieb{
+					.ce-bodytext{
+						padding: 1rem;
+					}
+				}
+			}
+		}
+	}	
+}

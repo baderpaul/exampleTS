@@ -1,0 +1,186 @@
+########################################################################
+###################### Grid Elements
+########################################################################
+
+
+tx_gridelements {
+
+	setup {
+		# ID
+		1 {
+			icon = EXT:eaw_t3115/Resources/Public/Icons/icon_2col.png
+
+			title = 2-spaltig
+			description = Ein zweispaltiges Inhaltselement
+
+			# Konfiguration die normal im Datensatz stehen würde
+			config {
+				colCount = 2
+				rowCount = 1
+				rows {
+					1 {
+						columns {
+							1 {
+								name = Linke Spalte
+								colPos = 211
+							}
+							2 {
+								name = Rechte Spalte
+								colPos = 212
+							}
+						}
+					}
+				}
+			}
+		
+
+		flexformDS (
+			<T3DataStructure>
+				<meta>
+					<langDisable>1</langDisable>
+				</meta>
+				
+				<ROOT type="array">
+					<type>array</type>
+					<el type="array">
+					<columnType type="array">
+							<TCEforms type="array">
+							<label>Spaltenverhältnis</label>
+							<config type="array">
+								<type>selectSingle</type>
+								<items type="array">
+								<numIndex index="0" type="array">
+									<numIndex index="0">50:50</numIndex>
+									<numIndex index="1">cols5050</numIndex>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<numIndex index="0">33:66</numIndex>
+									<numIndex index="1">cols3366</numIndex>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<numIndex index="0">66:33</numIndex>
+									<numIndex index="1">cols6633</numIndex>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<numIndex index="0">25:75</numIndex>
+									<numIndex index="1">cols2575</numIndex>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<numIndex index="0">75:25</numIndex>
+									<numIndex index="1">cols7525</numIndex>
+								</numIndex>
+								</items>
+							</config>
+							</TCEforms>
+					</columnType>
+					</el>
+				</ROOT>
+			</T3DataStructure>
+		)
+		}
+		
+		
+		2 {
+			icon = EXT:eaw_t3115/Resources/Public/Icons/icon_3col.png
+			title = 3-spaltig
+			description = Ein dreispaltiges Inhaltselement
+
+			# Konfiguration die normal im Datensatz stehen würde
+			config {
+				colCount = 3
+				rowCount = 1
+				rows {
+					1 {
+						columns {
+							1 {
+								name = Linke Spalte
+								colPos = 311
+							}
+							2 {
+								name = Mittlere Spalte
+								colPos = 312
+							}
+							3 {
+								name = Rechte Spalte
+								colPos = 313
+							}
+						}
+					}
+				}
+			}
+			
+			flexformDS (
+				<T3DataStructure>
+					<meta>
+						<langDisable>1</langDisable>
+					</meta>
+					
+					<ROOT type="array">
+						<type>array</type>
+						<el type="array">
+						<columnType type="array">
+							<TCEforms type="array">
+							<label>Spaltenverhältnis</label>
+							<config type="array">
+								<type>selectSingle</type>
+								<items type="array">
+								<numIndex index="0" type="array">
+									<numIndex index="0">33:33:33</numIndex>
+									<numIndex index="1">cols333333</numIndex>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<numIndex index="0">50:25:25"</numIndex>
+									<numIndex index="1">cols502525</numIndex>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<numIndex index="0">25:25:50</numIndex>
+									<numIndex index="1">cols252550</numIndex>
+								</numIndex>
+								</items>
+							</config>
+							</TCEforms>
+						</columnType>
+						</el>
+					</ROOT>
+				</T3DataStructure>
+			)
+		}
+		
+		3 {
+			icon = EXT:eaw_t3115/Resources/Public/Icons/icon_4col.png
+			title = 4-spaltig
+			description = Ein vierspaltiges Inhaltselement
+
+			# Konfiguration die normal im Datensatz stehen würde
+			config {
+				colCount = 4
+				rowCount = 1
+				rows {
+					1 {
+						columns {
+							1 {
+								name = Linke Außenspalte
+								colPos = 411
+							}
+							
+							2 {
+								name = Linke Spalte
+								colPos = 412
+							}
+							
+							3 {
+								name = Rechte Spalte
+								colPos = 413
+							}
+							
+							4 {
+								name = Rechte Außenspalte
+								colPos = 414
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+#########################################################################
+###################### Basis-Framework
+#########################################################################
+config {
+	# Typo3-Kommentare im Quelltext der Seite automatisch entfernen
+    disablePrefixComment = 1 
+    
+    # Globale Spracheinstellung auf Deutsch festsetzen (Default-Sprache mit der ID 0)
+    sys_language_uid = 0
+    htmlTag_langKey = de    
+    
+    # Teilt dem System mit, dass es sich hierbei Deutsch handelt 
+    language = de
+    
+    # ALLE lokalisierten textlichen Ausgaben (Strings) wie z.B. Extensions, Datum, Waehrung in DEUTSCHER Version abholen
+    locale_all  = de_DE.utf8    
+    
+    sendCacheHeaders = 1
+    
+    spamProtectEmailAddresses = -2 
+    spamProtectEmailAddresses_atSubst = (at)
+    spamProtectEmailAddresses_lastDotSubst = (.)
+
+    contentObjectExceptionHandler = 0
+    
+    
+    concatenateJs = 0
+    compressJs = 0
+
+    concatenateCss = 0
+    compressCss = 0
+
+    noCache = 1
+
+    
+    # Schaltet das Editieren ein, versteckt jedoch das Admin Panel. 
+    # Dank override werden die Bearbeitungssymbole und -leiste trotzdem angezeigt!
+    admPanel = 0
+    
+	# Frontend-Editing Modul anschalten
+    frontend_editing = 0
+    
+}
+
+

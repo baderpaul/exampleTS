@@ -1,0 +1,65 @@
+#########################################################################
+###################### Eigene Rahmen für die Layouts erstellen
+#########################################################################
+
+tt_content.stdWrap.innerWrap.cObject= CASE
+tt_content.stdWrap.innerWrap.cObject {
+	key.field = layout
+	
+	1=TEXT
+    1.value = <div class="frame-width70">|</div>
+
+
+
+    3=TEXT
+    3.value = <div class="signature block">|</div>
+
+	4=TEXT
+    4.value = <div class="signatureimage block">|</div>   
+    
+
+
+    6=TEXT
+    6.value = <div class="signature70 fullheight block">|</div>      
+
+
+
+    7=TEXT
+    7.value = <div class="signaturetwo block">|</div>
+
+    8=TEXT
+    8.value = <div class="signaturetwoimage block">|</div>
+    
+    9=TEXT
+    9.value = <div class="signaturetwo70 block">|</div>
+
+    10=TEXT
+    10.value = <div class="signaturetwo70 fullheight block">|</div>
+ 
+    
+ 
+ 
+     
+
+    18 = TEXT
+    18.value = <div class="factIcons">|</div>
+    
+    19 = TEXT
+    19.value = <div class="ansichten">|</div>
+    
+    
+    
+    21 = TEXT
+    21.value = <div class="img50">|</div>
+
+    22 = TEXT
+    22.value = <div class="reservationBanner">|</div>
+
+    
+	24 = TEXT
+    24.value = <div class="bluebordersale sold">|</div>
+    
+    25 = TEXT
+    25.value = <div class="bluebordersale70">|</div>
+
+}

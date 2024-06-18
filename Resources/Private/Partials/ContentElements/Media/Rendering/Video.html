@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+	<f:variable name="posterMerge">{file.originalFile.storage.configuration.basePath}{v:format.replace(content: '{file.identifier}', substring: 'mp4', replacement: 'jpg', count: 1, caseSensitive: 1)}</f:variable>
+
+	<f:variable name="poster">{v:format.replace(content: '{posterMerge}', substring: '//', replacement: '/', count: 1, caseSensitive: 1)}</f:variable>
+
+	<f:media class="video-embed-item" file="{file}" width="{dimensions.width}" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" additionalConfig="{settings.media.additionalConfig}" 	additionalAttributes="{poster: poster}"/>
+</html>
+
+

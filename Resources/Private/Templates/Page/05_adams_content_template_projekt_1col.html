@@ -1,0 +1,12 @@
+<!-- Hier den Namen der Layout-Datei angeben -->
+<f:layout name="01_adams_layout_projekt" />
+
+	<f:section name="content">
+		<section id="teaser">			
+			<f:render partial="03_adams_content_partial_blank" arguments="{inhalt:slider}" />
+		</section>
+
+		<section id="content">
+			<f:render partial="03_adams_content_partial_blank" arguments="{inhalt:inhalt}" />
+		</section>
+	</f:section>

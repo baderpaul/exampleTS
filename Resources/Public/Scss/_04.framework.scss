@@ -1,0 +1,160 @@
+/**************************************************************************/
+/********************** Clearfix für Floats
+/*************************************************************************/
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+
+
+/**************************************************************************/
+/********************** Basis-Framework
+/*************************************************************************/
+
+
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
+
+#mainWrap{
+	min-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	
+	header,
+	footer{
+		flex: 0 1 auto;
+	}
+	
+	#contentWrapper{
+		flex: 1;
+	}
+	
+	
+}
+
+
+
+
+#slider{
+
+	margin: 0 auto 2rem;
+	
+	@include breakpoint(mopo,max,portrait){
+		width: 100%;
+		margin-bottom: 0;
+	}
+	
+	@include breakpoint(mola,min,landscape){
+		width: 100%;
+	}
+
+	@include breakpoint(tapo){
+		width: 100%;
+		margin-bottom: 0;
+	}
+	
+	@include breakpoint(tala){
+		width: 100%;
+	}
+	
+	@include breakpoint(desksmall){
+		width: 70%;
+	}
+	
+
+	img{
+		width: 100%;
+		height: auto;
+	}
+
+	div[id^="c"]{
+		@include breakpoint(tapo){
+			margin-bottom: 0rem;
+		}
+	
+		@include breakpoint(mopo){
+			margin-bottom: 0rem;
+		}	
+	}
+}
+
+footer{
+	padding: 1rem 0 0.5rem;	
+	@include breakpoint(mola){
+		padding: 0rem;
+	}
+	
+	@include breakpoint(mopo){
+		padding: 1rem;
+	}
+	.container-fluid{
+		width: 70%;
+		margin: 0 auto;
+		
+		@include breakpoint(tala,max){
+			width: 100%;
+		}
+		.row{
+			display: flex;
+			align-items: center;
+			@include breakpoint(mopo,max){
+				flex-direction: column;
+			}
+		}
+		
+		.col {
+			flex: 1 1 auto;
+			@include breakpoint(mopo,max){
+				width: 100%;
+			}
+			&.first{
+				width: 20%;
+			}
+		}
+	}
+
+	
+	.fa-brand-icons{
+		width: 20%;
+		@include breakpoint(mopo,max){
+			width: 100%;
+			margin-top: 2rem;
+		}
+		
+		text-align: end;
+		@include breakpoint(mopo,max){
+			text-align: center;
+		}
+		
+		.icon{
+			fill: white;
+		}
+		img{
+			height: 1.5rem;
+			width: auto;
+			margin: 0 1rem;	
+			@include breakpoint(mopo,max){
+				margin: 0 1rem;
+			}
+			cursor: pointer;		
+		}
+		
+		a:last-child{
+			img{
+				margin-right: 0;
+				@include breakpoint(mopo,max){
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+}

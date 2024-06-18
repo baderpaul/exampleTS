@@ -1,0 +1,7 @@
+page.includeJSlibs >
+page.includeJS >
+page.includeJSFooterlibs >
+page.includeJSFooter >
+config.inlineStyle2TempFile = 0
+
+page.includeCSS >

@@ -1,0 +1,37 @@
+#
+# BACKENDLAYOUT: Projektseite Goldeck
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            9 {
+                icon = EXT:eaw_t3115/Resources/Public/Icons/be_projekte_1col.png
+                title = Projektseite Goldeck
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 2
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Slider
+                                        colPos = 11
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Content
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

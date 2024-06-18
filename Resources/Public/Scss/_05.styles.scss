@@ -1,0 +1,422 @@
+/**************************************************************************/
+/********************** Styling Allgemein
+/*************************************************************************/
+
+body {
+  background-color: $colBase;
+}
+
+#header {
+  text-align: center;
+}
+
+/**************************************************************************/
+/********************** Footer Navigation
+/*************************************************************************/
+/**/
+footer {
+  background: $colGreyBG;
+
+  nav {
+    ul {
+      list-style: none;
+      position: relative;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+
+      @include breakpoint(mopo, max) {
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      li,
+      a {
+        font: 300 1rem/1rem $copyfont;
+        color: $colCopyfont;
+      }
+
+      li {
+        display: inline-block;
+        margin: 0;
+        padding: 0 0.25rem;
+        &.copyright {
+          padding: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+        border-right: 1px solid $colBase;
+
+        @include breakpoint(mopo, max) {
+          border-right: none;
+          display: block;
+        }
+
+        &.copyright {
+          margin-right: 0.5rem;
+          @include breakpoint(mopo, max) {
+            width: 100%;
+            margin-right: 0;
+          }
+        }
+
+        a {
+          display: block;
+          padding: 0.25rem 1rem;
+          margin-right: 0px;
+          border: 0;
+          background: none;
+          @include breakpoint(mola) {
+            padding: 0 0.25rem;
+            line-height: normal;
+          }
+        }
+
+        &:last-child,
+        &:first-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+/**************************************************************************/
+/********************** Content
+/*************************************************************************/
+
+#content,
+#asideRight {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+header {
+  @include breakpoint(tapo, max) {
+    margin: 0 0.5rem;
+  }
+}
+
+/**************************************************************************/
+/********************** Anpassung der Standard-Elemente Text & Bild
+/*************************************************************************/
+
+.ce-media {
+  margin-bottom: 1rem;
+}
+
+/* Text neben Bild, Headline oben drüber */
+.ce-intext,
+.ce-above {
+  &.ce-left,
+  &.ce-right {
+    .ce-gallery {
+      .ce-bodytext {
+      }
+    }
+  }
+
+  &.ce-right {
+    .ce-gallery {
+      float: right;
+      margin-left: 2rem;
+      max-width: 50%;
+
+      @include breakpoint(mopo, max) {
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+/*Text und Headline neben dem Bild */
+
+.ce-right.ce-nowrap,
+.ce-left.ce-nowrap {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(tala) {
+    flex-direction: row;
+  }
+  .ce-gallery {
+    width: 100%;
+    @include breakpoint(tala) {
+      width: 50%;
+      margin-left: 1rem;
+      flex: 1 1 auto;
+      order: 2;
+    }
+  }
+  .ce-bodytext {
+    width: 100%;
+    @include breakpoint(tala) {
+      width: 50%;
+      order: 1;
+    }
+  }
+}
+
+.ce-left.ce-nowrap {
+  .ce-gallery {
+    float: left;
+    margin-right: 1rem;
+    margin-left: 0;
+    flex: 1 1 auto;
+    order: 1;
+  }
+  .ce-bodytext {
+    width: 100%;
+    order: 2;
+    @include breakpoint(tala) {
+      width: 50%;
+      order: 1;
+    }
+  }
+}
+
+.ce-right.ce-above,
+.ce-right.ce-below {
+  .ce-gallery {
+    width: 70%;
+    float: right;
+  }
+  .ce-bodytext {
+    clear: both;
+  }
+}
+
+.ce-left.ce-above,
+.ce-left.ce-below {
+  .ce-gallery {
+    width: 70%;
+    float: none;
+  }
+  .ce-bodytext {
+    clear: both;
+  }
+}
+
+/* Text unter Bild bei kleinen Darstellungen, z.B. Mitarbeiter oder Vertrieb */
+
+.vertrieb {
+  .ce-gallery + .ce-bodytext {
+    padding: 0rem 1rem 0;
+    p {
+      margin: 0;
+    }
+
+    @include breakpoint(tala) {
+      padding: 0.25rem 0.5rem 0;
+    }
+
+    @include breakpoint(tapo) {
+      padding: 0.25rem 0.5rem;
+    }
+  }
+}
+
+/***********************************************************************************
+	                    	Anpassung Bilder im Text
+************************************************************************************/
+
+/*
+.ce-intext {
+  div[data-ce-columns="2"] {
+    padding-left: 2rem;
+    .ce-row {
+      @include outer-container;
+      .ce-column {
+        @include span-columns(6);
+
+        @include breakpoint(mola) {
+          @include span-columns(4);
+        }
+
+        &:last-child {
+          @include omega();
+        }
+      }
+    }
+  }
+  &.ce-right{
+    div[data-ce-columns="2"]{
+      padding-left: 0;
+    }
+  }
+}
+*/
+figure {
+  margin: 0;
+}
+
+figcaption {
+  background-color: $colGreyBG;
+  padding: 0.5rem 0.25rem;
+}
+
+/***********************************************************************************
+	                    	Anpassung Bilder-Reihen
+************************************************************************************/
+
+div[data-ce-columns="1"] {
+  .ce-row {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+div[data-ce-columns="2"],
+div[data-ce-columns="3"],
+div[data-ce-columns="4"],
+div[data-ce-columns="5"] {
+  .ce-row {
+    float: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    &:after{
+      content: none;
+    }
+    
+    @include breakpoint(mopo,max){
+      flex-direction: column;
+    }
+  }
+}
+
+
+div[data-ce-columns="2"] {    
+  .ce-column{
+    width: auto;
+    max-width: 50%;
+    
+    @include breakpoint(mopo,max){
+      max-width: 100%;
+      margin: 0 0.5rem;
+    }
+    
+    &.twoColumns{
+      margin-right: 1rem;
+      &:last-child{
+        margin-right: 0;
+      }
+      @include breakpoint(mopo,max){
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+div[data-ce-columns="3"] { 
+    .ce-column{
+      width: auto;
+      max-width: 33%;
+      
+      @include breakpoint(mopo,max){
+        max-width: 100%;
+        margin: 0 0.5rem;
+      }
+      
+      &.threeColumns{
+        margin-right: 1rem;
+        &:last-child{
+          margin-right: 0;
+        }
+        @include breakpoint(mopo,max){
+          margin: 0;
+        }
+      }
+    } 
+  }
+
+div[data-ce-columns="4"] { 
+    .ce-column{
+      width: auto;
+      max-width: 25%;
+      
+      @include breakpoint(mopo,max){
+        max-width: 100%;
+        margin: 0 0.5rem;
+      }
+      
+      &.fourColumns{
+        margin-right: 1rem;
+        &:last-child{
+          margin-right: 0;
+        }
+        @include breakpoint(mopo,max){
+          margin: 0;
+        }
+      }
+    } 
+  }
+
+
+div[data-ce-columns="5"] {    
+    .ce-column{
+      width: auto;
+      max-width: 20%;
+      
+      @include breakpoint(mopo,max){
+        max-width: 100%;
+        margin: 0 0.5rem;
+      }
+    } 
+  }
+  
+  
+  /***********************************************************************************
+                          Anpassung Abstände vor und nach
+  ************************************************************************************/
+
+.frame-space-before-extra-small {
+  margin-top: 0.5rem;
+}
+
+.frame-space-before-small {
+  margin-top: 1rem;
+}
+
+.frame-space-before-medium {
+  margin-top: 2rem;
+}
+
+.frame-space-before-large {
+  margin-top: 3rem;
+}
+
+.frame-space-before-xtra-large {
+  margin-top: 4rem;
+}
+
+
+
+.frame-space-after-extra-small {
+  margin-bottom: 0.5rem;
+}
+
+.frame-space-after-small {
+  margin-bottom: 1rem;
+}
+
+.frame-space-after-medium {
+  margin-bottom: 2rem;
+}
+
+.frame-space-after-large {
+  margin-bottom: 3rem;
+}
+
+.frame-space-after-xtra-large {
+  margin-bottom: 4rem;
+}

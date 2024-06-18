@@ -1,0 +1,17 @@
+/* Typo anpassen */
+
+.lb-data {
+  .lb-number,
+  .lb-caption {
+    font: $Copy;
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* Padding bei Bildunterschriften im Mobile-View korrigieren */
+.jnlightbox{
+  padding: 0 !important;
+}

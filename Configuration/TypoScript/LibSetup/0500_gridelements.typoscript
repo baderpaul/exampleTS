@@ -1,0 +1,63 @@
+lib.gridelements.defaultGridSetup {
+  columns {
+    default {
+      renderObj = COA
+      renderObj {
+        20 =< tt_content
+      }
+    }
+  }
+  cObject =< lib.contentElement
+}
+
+plugin.tx_gridelements_pi1 >
+tt_content.gridelements_pi1 >
+tt_content.gridelements_pi1 =< lib.contentElement
+tt_content.gridelements_pi1 {
+    # Fluid Styled Content liefert aktuell nur Default
+    # Stattdessen muß Generic verwendet werden, weil es kein Default Template gibt
+    templateName = Generic
+    variables {
+        content = COA
+        content {
+            10 = USER
+            10 {
+                userFunc = GridElementsTeam\Gridelements\Plugin\Gridelements->main
+                setup {
+                    default < lib.gridelements.defaultGridSetup
+                    
+                    1 < lib.gridelements.defaultGridSetup
+                    1 {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            templateName = Twocol
+                            templateRootPaths {
+                                20 = {$resDir}/Private/Templates/Gridelements/
+                            }
+						}
+                    }
+                    
+                    2 < lib.gridelements.defaultGridSetup
+                    2 {
+                        cObject {
+                            templateName = Threecol
+                            templateRootPaths {
+                                20 = {$resDir}/Private/Templates/Gridelements/
+                            }
+                        }
+                    }
+                    
+                    3 < lib.gridelements.defaultGridSetup
+                    3 {
+                        cObject {
+                            templateName = Fourcol
+                            templateRootPaths {
+                                20 = {$resDir}/Private/Templates/Gridelements/
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

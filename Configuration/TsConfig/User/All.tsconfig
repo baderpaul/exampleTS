@@ -1,0 +1,23 @@
+options.pageTree{
+	showPageIdWithTitle = 0
+	backgroundColor.32 = rgba(130,160,230,0.2)
+	backgroundColor.56 = rgba(0, 255, 0, 0.1)
+}
+options.clearCache.system = 1
+
+options.clearCache.all = 1
+
+options.clearCache.pages = 1
+
+options.file_list{
+	enableDisplayBigControlPanel = selectable
+	enableDisplayThumbnails = selectable
+	enableClipBoard = selectable
+}
+
+mod.web_list{
+	enableDisplayBigControlPanel = selectable
+	enableClipBoard = selectable
+	}
+	
+	

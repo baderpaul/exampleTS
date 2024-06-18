@@ -1,0 +1,42 @@
+#
+# BACKENDLAYOUT: Slider & Content
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            2 {
+                icon = EXT:eaw_t3115/Resources/Public/Icons/be_1col+slider.png
+                title = Startseite
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 3
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Slider
+                                        colPos = 11
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Inhalte
+                                        rowspan = 2
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

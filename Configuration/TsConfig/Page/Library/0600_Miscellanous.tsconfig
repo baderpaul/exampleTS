@@ -1,0 +1,9 @@
+#Überschriften mit Line-Break ausgeben#
+lib.stdheader.10.setCurrent.htmlSpecialChars = 0
+
+
+#Bei den Bildern die Positioniermöglichkeiten ändern
+TCEFORM.tt_content.imageorient{
+	removeItems = 1,2,9,10
+	default     = 26
+}

@@ -1,0 +1,249 @@
+/**************************************************************************/
+/********************** Grid-Elements
+/*************************************************************************/
+
+
+.twoCol,
+.ThreeCol,
+.fourCol {
+	list-style: none;
+}
+
+
+
+/******************** Zweispaltig 50/50 => 2col.html ********************/
+
+.twoCol {
+	min-height:100%;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 2rem;
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+
+	.leftCol,
+	.rightCol{
+		flex: 0 1 auto;
+	}
+
+	@include breakpoint(mopo,max){
+		.leftCol,
+		.rightCol{
+			margin-bottom: 2rem;
+		}
+	}
+	
+	@include breakpoint(tapo){
+		flex-direction: row;
+	}
+}
+
+.cols5050{	
+	@include breakpoint(tapo){
+		.leftCol,
+		.rightCol{
+				width: 50%;
+		}
+	
+		.leftCol{
+			margin-right: 0.5rem;
+		}
+		.rightCol{
+			margin-left: 0.5rem;
+		}
+	}
+}
+
+
+.cols3366 {
+
+	.leftCol{
+		width: 33.333%;
+		margin-right: 2rem;
+	}
+	
+	.rightCol {
+		width: 66.666%
+	}
+	
+	
+	@include breakpoint(mopo,max){
+		margin: 0;
+		padding: 0;
+		flex-direction: column;
+		
+		.leftCol, .rightCol{
+			width: 100%;
+
+			.ce-bodytext {
+				padding: 0;
+			}
+		}
+	}	
+}
+
+
+.cols6633 {
+
+	.leftCol{
+		width: 66.666%;
+		margin-right: 2rem;
+	}
+	
+	.rightCol {
+		width: 33.333%;
+	}
+	
+	
+	@include breakpoint(mopo,max){
+		margin: 0;
+		padding: 0;
+		flex-direction: column-reverse;
+
+			
+		.leftCol, .rightCol{
+			width: 100%;
+
+			.ce-bodytext {
+				padding: 0;
+			}
+		}
+	}	
+}
+
+
+.cols7525 {
+
+	.leftCol{
+		width: 70%;
+		margin-right: 2rem;
+	}
+	
+	.rightCol {
+		width: 30%;
+	}
+	
+	@include breakpoint(mopo,max){
+	}		
+}
+
+
+
+.cols2575 {
+
+	.leftCol{
+		width: 30%;
+		margin-right: 2rem;
+		
+	}
+	
+	.rightCol {
+		width: 70%;
+	}
+	
+	
+	@include breakpoint(mopo,max){
+		flex-direction: column-reverse;
+		
+		.leftCol,
+		.rightCol{
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+/******************** Dreispaltig 33/33/33 => 3col.html ********************/
+
+.threeCol {
+	padding: 0;
+	min-height:100%;
+	display: flex;
+	align-items: stretch;
+	list-style: none;
+	flex-direction: row;
+	
+	@include breakpoint(mopo,max){
+		width: 100%;
+		flex-direction: column;
+	}
+	
+	@include breakpoint(tapo){
+		width: 90%;
+	}
+	
+
+	.leftCol,
+	.middleCol,
+	.rightCol{
+		flex: 1 1 10%;
+		margin: 0 0.5rem 1rem;
+	}
+	
+	.ce-bodytext {
+		padding: 0;
+	}
+	
+	.leftCol{
+		margin-left: 0;
+		
+		@include breakpoint(mopo,max){
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+	}
+	
+	.middleCol{
+		
+		@include breakpoint(mopo,max){
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+	}
+	
+	.rightCol {
+		margin-right: 0;
+
+		@include breakpoint(mopo,max) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+
+
+
+/******************** Vierspaltig 25/25/25/25 => 4col.html ********************/
+
+.fourCol {
+	padding: 0;
+	min-height:100%;
+	display: flex;
+	align-items: stretch;
+	
+	@include breakpoint(mopo,max){
+		flex-direction: column;
+	}
+	
+	.outerLeftCol,
+	.leftCol,
+	.rightCol,
+	.outerRightCol{
+		width: 25%;
+		margin-right: 2rem;
+		@include breakpoint(mopo,max){
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
+	}
+	.outerRightCol{
+		margin-right: 0;
+	}
+}
