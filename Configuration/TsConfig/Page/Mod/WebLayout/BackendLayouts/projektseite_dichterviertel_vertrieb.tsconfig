@@ -5,7 +5,7 @@ mod {
     web_layout {
         BackendLayouts {
             8 {
-                icon = EXT:eaw_t3115/Resources/Public/Icons/be_projekte.png
+                icon = EXT:eaw_t3124/Resources/Public/Icons/be_projekte.png
                 title = Projektseite Dichterviertel  + Vertrieb
                 config {
                     backend_layout {

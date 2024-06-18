@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             js: '<%= paths.resources %>Public/JavaScript/'
         },
         banner: '/*!\n' +
-            ' * EAW T3 11.5 v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * EAW T3 12.4 v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2017-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under the <%= pkg.license %> license\n' +
             ' */\n',

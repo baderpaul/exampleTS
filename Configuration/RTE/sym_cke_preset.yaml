@@ -5,7 +5,7 @@ imports:
 
 editor:
   config:
-    contentsCss: "EXT:eaw_t3115/Resources/Public/Css/99.ckeditor.min.css?v=9"
+    contentsCss: "EXT:eaw_t3124/Resources/Public/Css/99.ckeditor.min.css?v=9"
     format_tags: "p;h1;h2;h3;h4;h5;pre"
     stylesSet:
         # custom block level style

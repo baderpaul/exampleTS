@@ -1,7 +1,7 @@
 plugin{
 	tx_powermail {
 		settings.db.enable = 0
-		view.partialRootPath = EXT:eaw_t3115/Resources/Private/Partials/Powermail/
+		view.partialRootPath = EXT:eaw_t3124/Resources/Private/Partials/Powermail/
 		settings.main.pid = 0
 		settings.main.confirmation = 0
 		settings.main.optin = 0

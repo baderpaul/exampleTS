@@ -5,7 +5,7 @@ mod {
     web_layout {
         BackendLayouts {
             9 {
-                icon = EXT:eaw_t3115/Resources/Public/Icons/be_projekte_1col.png
+                icon = EXT:eaw_t3124/Resources/Public/Icons/be_projekte_1col.png
                 title = Projektseite Goldeck
                 config {
                     backend_layout {

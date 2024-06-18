@@ -4,7 +4,7 @@ page.headerData{
   1.value = <script type="application/javascript" src="https://app.usercentrics.eu/latest/main.js" id="y1EEnrgMm"></script>
 
   2 = TEXT
-  2.value = <script type="text/plain" data-usercentrics="Google Analytics 4" src="/typo3conf/ext/eaw_t3115/Resources/Public/JavaScript/Dist/ga4.min.js"></script> 
+  2.value = <script type="text/plain" data-usercentrics="Google Analytics 4" src="/typo3conf/ext/eaw_t3124/Resources/Public/JavaScript/Dist/ga4.min.js"></script> 
 }
 
 

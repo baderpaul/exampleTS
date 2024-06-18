@@ -1,4 +1,4 @@
 #
 # BACKENDLAYOUTS
 #
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:eaw_t3115/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:eaw_t3124/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">

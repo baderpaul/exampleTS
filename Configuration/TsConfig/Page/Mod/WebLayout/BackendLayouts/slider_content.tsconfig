@@ -35,7 +35,7 @@ mod {
                         }
                     }
                 }
-                icon = EXT:eaw_t3115/Resources/Public/Icons/be_1col+slider.png
+                icon = EXT:eaw_t3124/Resources/Public/Icons/be_1col+slider.png
             }
         }
     }

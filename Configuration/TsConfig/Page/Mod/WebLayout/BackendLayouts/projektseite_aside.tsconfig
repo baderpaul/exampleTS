@@ -5,7 +5,7 @@ mod {
     web_layout {
         BackendLayouts {
             5 {
-                icon = EXT:eaw_t3115/Resources/Public/Icons/be_projekte.png
+                icon = EXT:eaw_t3124/Resources/Public/Icons/be_projekte.png
                 title = Projektseite + Aside
                 config {
                     backend_layout {

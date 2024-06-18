@@ -5,7 +5,7 @@ mod {
     web_layout {
         BackendLayouts {
             2 {
-                icon = EXT:eaw_t3115/Resources/Public/Icons/be_1col+slider.png
+                icon = EXT:eaw_t3124/Resources/Public/Icons/be_1col+slider.png
                 title = Startseite
                 config {
                     backend_layout {

@@ -3,6 +3,6 @@
 #############
 RTE {
     default {
-        preset = eaw_t3115
+        preset = eaw_t3124
     }
 }
