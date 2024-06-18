@@ -3,7 +3,7 @@
 #### VARIABLES ####
 ###################
 
-resDir = EXT:eaw_t3115/Resources
+resDir = EXT:eaw_t3124/Resources
 
 
 
@@ -15,7 +15,7 @@ resDir = EXT:eaw_t3115/Resources
 # @import 'EXT:usercentrics/Configuration/TypoScript/Static/constants.typoscript'
 @import 'EXT:powermail/Configuration/TypoScript/Main/constants.typoscript'
 
-@import 'EXT:eaw_t3115/Configuration/TypoScript/LibConstants/*.typoscript'
+@import 'EXT:eaw_t3124/Configuration/TypoScript/LibConstants/*.typoscript'
 @import 'EXT:jn_lighterbox/Configuration/TypoScript/constants.typoscript'
 @import 'EXT:ws_slider/Configuration/TypoScript/constants.typoscript'
 @import 'EXT:ws_slider/Configuration/TypoScript/Assets/Flexslider/constants.typoscript'
